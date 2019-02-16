@@ -2,10 +2,26 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ScoutingApp2019"
-             x:Class="ScoutingApp2019.MainPage">
-    <ContentPage>
-        <StackLayout>
-            
+             x:Class="ScoutingApp2019.MainPage"
+            Title="Scouting App 2019">
+    <ContentPage Title="Start" Padding="10">
+        <StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Start">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name" FontSize="24" VerticalOptions="Center"/>
+                <Entry x:Name="NameEntry" FontSize="24" Keyboard="Text" WidthRequest="250" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Match #" FontSize="24" VerticalOptions="Center"/>
+                <Entry x:Name="MatchEntry" FontSize="24" Keyboard="Numeric" MaxLength="3" WidthRequest="64" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Robot #" FontSize="24" VerticalOptions="Center"/>
+                <Entry x:Name="RobotNumEntry" FontSize="24" Keyboard="Numeric" MaxLength="4" WidthRequest="64" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Replay Match?" FontSize="24" VerticalOptions="Center"/>
+                <Switch x:Name="ReplaySwitch" IsEnabled="True"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage>
 </TabbedPage>
