@@ -1,0 +1,12 @@
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\bin\Debug\netstandard2.0\ScoutingApp2019.deps.json
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\bin\Debug\netstandard2.0\ScoutingApp2019.dll
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\bin\Debug\netstandard2.0\ScoutingApp2019.pdb
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.csprojAssemblyReference.cache
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.AssemblyInfoInputs.cache
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.AssemblyInfo.cs
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.dll
+C:\Users\Andrew\source\repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.pdb
