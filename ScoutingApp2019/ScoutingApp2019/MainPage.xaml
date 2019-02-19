@@ -24,4 +24,126 @@
             </StackLayout>
         </StackLayout>
     </ContentPage>
+
+    <ContentPage Title="Sandstorm" Padding="10">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="SANDSTORM/AUTO DATA ENTRY" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical">  <!--Ship 1 (Near)-->
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout Orientation="Vertical"> <!--Cargo-->
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout Orientation="Vertical"> <!--Ship 2 ( Far )-->
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsEnabled="True"/>
+                    <Switch IsEnabled="True"/>
+                </StackLayout>
+            </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Teleop" Padding="10">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Words"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="End Game" Padding="10">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Words"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Performance" Padding="10">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Words"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
 </TabbedPage>

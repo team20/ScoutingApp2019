@@ -18,6 +18,14 @@ public abstract class ViewRenderer_2
 	}
 
 
+	public ViewRenderer_2 (android.content.Context p0)
+	{
+		super (p0);
+		if (getClass () == ViewRenderer_2.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ViewRenderer`2, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+	}
+
+
 	public ViewRenderer_2 (android.content.Context p0, android.util.AttributeSet p1, int p2)
 	{
 		super (p0, p1, p2);
@@ -31,14 +39,6 @@ public abstract class ViewRenderer_2
 		super (p0, p1);
 		if (getClass () == ViewRenderer_2.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ViewRenderer`2, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
-	}
-
-
-	public ViewRenderer_2 (android.content.Context p0)
-	{
-		super (p0);
-		if (getClass () == ViewRenderer_2.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ViewRenderer`2, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
 	}
 
 

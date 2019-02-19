@@ -2,6 +2,6 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <AndroidDesignerPreferredTheme>Theme.DeviceDefault.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
-    <SelectedDevice>team20tablet</SelectedDevice>
+    <SelectedDevice>Samsung SM-T580</SelectedDevice>
   </PropertyGroup>
 </Project>
