@@ -30,95 +30,115 @@
             <StackLayout Orientation="Horizontal">
                 <Label Text="SANDSTORM/AUTO DATA ENTRY" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-            <StackLayout Orientation="Vertical">  <!--Ship 1 (Near)-->
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
+            <StackLayout Orientation="Horizontal" Spacing="200">
+                <StackLayout Orientation="Vertical" Spacing="75">
+                    <!--Ship 1 (Near)-->
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
+
+                <StackLayout Orientation="Vertical" Spacing="55">
+                    <!--Cargo-->
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
+
+                <StackLayout Orientation="Vertical" Spacing="75">
+                    <!--Ship 2 ( Far )-->
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch IsEnabled="True"/>
+                        <Switch IsEnabled="True"/>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-            </StackLayout>
-            
-            <StackLayout Orientation="Vertical"> <!--Cargo-->
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-            </StackLayout>
-            
-            <StackLayout Orientation="Vertical"> <!--Ship 2 ( Far )-->
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Switch IsEnabled="True"/>
-                    <Switch IsEnabled="True"/>
-                </StackLayout>
-            </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage>
