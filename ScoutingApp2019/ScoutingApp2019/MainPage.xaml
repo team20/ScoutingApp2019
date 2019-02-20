@@ -38,139 +38,28 @@
                 <StackLayout Orientation="Vertical" Spacing="5">
                     <Label Text=""></Label>
                 </StackLayout>
-                <StackLayout Orientation="Vertical" Spacing="35">
-                    <!--Ship 1 (Near)-->
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Car_Rock_1_3_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_1_3_L" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Car_Rock_1_3_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_1_3_R" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Hat_Rock_1_3_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_1_3_L" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Hat_Rock_1_3_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_1_3_R" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Car_Rock_1_2_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_1_2_L" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Car_Rock_1_2_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_1_2_R" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Hat_Rock_1_2_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_1_2_L" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Hat_Rock_1_2_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_1_2_R" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Car_Rock_1_1_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_1_1_L" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Car_Rock_1_1_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_1_1_R" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Hat_Rock_1_1_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_1_1_L" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Hat_Rock_1_1_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_1_1_R" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                    </StackLayout>
-                </StackLayout>
-                <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Vertical" Spacing="35">
-                        <!--Cargo-->
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car_" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car_" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat_" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat_" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car_13" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car_14" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat_15" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat_16" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car_17" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car_18" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat_19" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat_20" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car_21" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car_22" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat_23" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat_24" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
-                    </StackLayout>
-                    <StackLayout Orientation="Vertical" Spacing="35">
-                        <!--Cargo Pt 2-->
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car25" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car26" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat27" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat28" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car29" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car30" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat31" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat32" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car33" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car34" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat35" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat36" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" Spacing="30">
-                            <Entry x:Name="sand_Att_Car37" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Car38" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                            <Entry x:Name="sand_Att_Hat39" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                            <Switch x:Name="sand_Pla_Hat40" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        </StackLayout>
+
+                <StackLayout Orientation="Vertical" Spacing="30">
+                    <!--Rocket 1 ( Far )-->
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sandRock1TCargoMinus" Text="-" Clicked="SandRock1TCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandRock1TCargoTotal" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1TCargoPlus" Text="+" Clicked="SandRock1TCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
                 </StackLayout>
 
-                <StackLayout Orientation="Vertical" Spacing="35">
-                    <!--Ship 2 ( Far )-->
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Car_Rock_2_3_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_2_3_L" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Car_Rock_2_3_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_2_3_R" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
+                <StackLayout Orientation="Vertical">
+                    <!--Cargo Ship-->
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sand_ShipCargoMinus" Text="-" Clicked="Sand_ShipCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandShipCargoTotal" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandShipCargoPlus" Text="+" Clicked="SandShipCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Hat_Rock_2_3_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_2_3_L" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Hat_Rock_2_3_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_2_3_R" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Car_Rock_2_2_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_2_2_L" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Car_Rock_2_2_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_2_2_R" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Hat_Rock_2_2_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_2_2_L" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Hat_Rock_2_2_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_2_2_R" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Car_Rock_2_1_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_2_1_L" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Car_Rock_2_1_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Car_Rock_2_1_R" IsEnabled="True" BackgroundColor="Orange" Scale="1.5"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Spacing="30">
-                        <Entry  x:Name="sand_Att_Hat_Rock_2_1_L" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_2_1_L" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
-                        <Entry  x:Name="sand_Att_Hat_Rock_2_1_R" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="30" VerticalOptions="Center"/>
-                        <Switch x:Name="sand_Pla_Hat_Rock_2_1_R" IsEnabled="True" BackgroundColor="Yellow" Scale="1.5"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sandShipHatchMinus" Text="-" Clicked="SandShipHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandShipHatchTotal" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandShipHatchPlus" Text="+" Clicked="SandShipHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
