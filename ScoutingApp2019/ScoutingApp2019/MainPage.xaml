@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ScoutingApp2019"
              x:Class="ScoutingApp2019.MainPage"
-            Title="Scouting App 2019">
+            Title="Scouting App 2019"
+            BackgroundColor="LightGray"
+            BarBackgroundColor="LimeGreen">
     <ContentPage Title="Start" Padding="10">
         <StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Start">
             <StackLayout Orientation="Horizontal">
@@ -25,128 +27,50 @@
         </StackLayout>
     </ContentPage>
 
+    <!-- P A G E 2 SANDSTORM -->
     <ContentPage Title="Sandstorm" Padding="10">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
                 <Label Text="SANDSTORM/AUTO DATA ENTRY" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Spacing="200">
-                <StackLayout Orientation="Vertical" Spacing="75">
-                    <!--Ship 1 (Near)-->
+
+            <StackLayout Orientation="Horizontal" Spacing="150">
+                <StackLayout Orientation="Vertical" Spacing="5">
+                    <Label Text=""></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Spacing="30">
+                    <!--Rocket 1 ( Far )-->
                     <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
+                        <Button x:Name="sandRock1TCargoMinus" Text="-" Clicked="SandRock1TCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandRock1TCargoTotal" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1TCargoPlus" Text="+" Clicked="SandRock1TCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
                 </StackLayout>
 
-                <StackLayout Orientation="Vertical" Spacing="55">
-                    <!--Cargo-->
+                <StackLayout Orientation="Vertical">
+                    <!--Cargo Ship-->
                     <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
+                        <Button x:Name="sand_ShipCargoMinus" Text="-" Clicked="Sand_ShipCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandShipCargoTotal" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandShipCargoPlus" Text="+" Clicked="SandShipCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    
-                </StackLayout>
 
-                <StackLayout Orientation="Vertical" Spacing="75">
-                    <!--Ship 2 ( Far )-->
                     <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Switch IsEnabled="True"/>
-                        <Switch IsEnabled="True"/>
+                        <Button x:Name="sandShipHatchMinus" Text="-" Clicked="SandShipHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandShipHatchTotal" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandShipHatchPlus" Text="+" Clicked="SandShipHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage>
 
+    <!--P A G E 3 TELEOP-->
     <ContentPage Title="Teleop" Padding="10">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
-                <Label Text="Words"></Label>
+                <Label Text="TELEOP DATA ENTRY" />
             </StackLayout>
         </StackLayout>
     </ContentPage>
