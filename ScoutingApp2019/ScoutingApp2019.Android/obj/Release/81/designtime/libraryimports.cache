@@ -32,6 +32,7 @@
     <Jar>obj\Release\81\lp\19\jl\bin\classes.jar</Jar>
     <Jar>obj\Release\81\lp\2\jl\arch-core-common.jar</Jar>
     <Jar>obj\Release\81\lp\20\jl\bin\classes.jar</Jar>
+    <Jar>obj\Release\81\lp\21\jl\formsviewgroup.jar</Jar>
     <Jar>obj\Release\81\lp\3\jl\arch-lifecycle-common.jar</Jar>
     <Jar>obj\Release\81\lp\4\jl\bin\classes.jar</Jar>
     <Jar>obj\Release\81\lp\5\jl\bin\classes.jar</Jar>

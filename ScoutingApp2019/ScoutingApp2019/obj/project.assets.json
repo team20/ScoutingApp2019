@@ -26,7 +26,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Xamarin.Forms/3.5.0.129452": {
+      "Xamarin.Forms/3.5.0.169047": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -190,10 +190,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Xamarin.Forms/3.5.0.129452": {
-      "sha512": "gdoGJ7U7J+WDMmtp0PIZ5Bex/5KGy1wL1TMHyR2+5jbxPxVy/htyiR5wqKDmOXVJoVbeqWjcj0/7yl8ZHM7akQ==",
+    "Xamarin.Forms/3.5.0.169047": {
+      "sha512": "bDUiWsvlU949lyf8gw5ROVQ0kRr1dB8daiWATYCXuOXv/iODsbq/8NmNVxhV2WbOo8b8wJMe7SqZG4V/CQlYuQ==",
       "type": "package",
-      "path": "xamarin.forms/3.5.0.129452",
+      "path": "xamarin.forms/3.5.0.169047",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -329,6 +329,7 @@
         "lib/uap10.0/Xamarin.Forms.Core.pdb",
         "lib/uap10.0/Xamarin.Forms.Core.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP.pdb",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
@@ -349,7 +350,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.5.0.129452.nupkg.sha512",
+        "xamarin.forms.3.5.0.169047.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
@@ -357,27 +358,27 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
-      "Xamarin.Forms >= 3.5.0.129452"
+      "Xamarin.Forms >= 3.5.0.169047"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\daddykat\\.nuget\\packages\\": {},
+    "C:\\Users\\Rike\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj",
+      "projectUniqueName": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj",
       "projectName": "ScoutingApp2019",
-      "projectPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj",
-      "packagesPath": "C:\\Users\\daddykat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\obj\\",
+      "projectPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj",
+      "packagesPath": "C:\\Users\\Rike\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\daddykat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rike\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -409,7 +410,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.5.0.129452, )"
+            "version": "[3.5.0.169047, )"
           }
         },
         "imports": [

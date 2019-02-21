@@ -313,7 +313,7 @@
           "build/monoandroid81/Xamarin.Android.Support.Vector.Drawable.targets": {}
         }
       },
-      "Xamarin.Forms/3.5.0.129452": {
+      "Xamarin.Forms/3.5.0.169047": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.Design": "27.0.2",
@@ -345,7 +345,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Xamarin.Forms": "3.5.0.129452"
+          "Xamarin.Forms": "3.5.0.169047"
         },
         "compile": {
           "bin/placeholder/ScoutingApp2019.dll": {}
@@ -778,10 +778,10 @@
         "xamarin.android.support.vector.drawable.nuspec"
       ]
     },
-    "Xamarin.Forms/3.5.0.129452": {
-      "sha512": "gdoGJ7U7J+WDMmtp0PIZ5Bex/5KGy1wL1TMHyR2+5jbxPxVy/htyiR5wqKDmOXVJoVbeqWjcj0/7yl8ZHM7akQ==",
+    "Xamarin.Forms/3.5.0.169047": {
+      "sha512": "bDUiWsvlU949lyf8gw5ROVQ0kRr1dB8daiWATYCXuOXv/iODsbq/8NmNVxhV2WbOo8b8wJMe7SqZG4V/CQlYuQ==",
       "type": "package",
-      "path": "xamarin.forms/3.5.0.129452",
+      "path": "xamarin.forms/3.5.0.169047",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -917,6 +917,7 @@
         "lib/uap10.0/Xamarin.Forms.Core.pdb",
         "lib/uap10.0/Xamarin.Forms.Core.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP.pdb",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
@@ -937,7 +938,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.5.0.129452.nupkg.sha512",
+        "xamarin.forms.3.5.0.169047.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -955,24 +956,24 @@
       "Xamarin.Android.Support.v7.AppCompat >= 28.0.0.1",
       "Xamarin.Android.Support.v7.CardView >= 28.0.0.1",
       "Xamarin.Android.Support.v7.MediaRouter >= 28.0.0.1",
-      "Xamarin.Forms >= 3.5.0.129452"
+      "Xamarin.Forms >= 3.5.0.169047"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\daddykat\\.nuget\\packages\\": {}
+    "C:\\Users\\Rike\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
       "projectName": "ScoutingApp2019.Android",
-      "projectPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
-      "packagesPath": "C:\\Users\\daddykat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\obj\\",
+      "projectPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
+      "packagesPath": "C:\\Users\\Rike\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\daddykat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rike\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -985,8 +986,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj": {
-              "projectPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj"
+            "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj": {
+              "projectPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj"
             }
           }
         }
@@ -1017,7 +1018,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.5.0.129452, )"
+            "version": "[3.5.0.169047, )"
           }
         }
       }
