@@ -62,5 +62,139 @@ namespace ScoutingApp2019
             if (temp <= 8)
                 sandRock1TCargoTotal.Text = temp.ToString();
         }
+
+        private void SandRock1THatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1THatchTotal.Text);
+            temp--;
+            if (temp >= 0)
+                sandRock1THatchTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1THatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1THatchTotal.Text);
+            temp++;
+            if (temp <= 8)
+                sandRock1THatchTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1MCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1MCargoTotal.Text);
+            temp--;
+            if (temp >= 0)
+                sandRock1MCargoTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1MCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1MCargoTotal.Text);
+            temp++;
+            if (temp <= 8)
+                sandRock1MCargoTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1MHatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1MHatchTotal.Text);
+            temp--;
+            if (temp >= 0)
+                sandRock1MHatchTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1MHatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1MHatchTotal.Text);
+            temp++;
+            if (temp <= 8)
+                sandRock1MHatchTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1BCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1BCargoTotal.Text);
+            temp--;
+            if (temp >= 0)
+                sandRock1BCargoTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1BCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandRock1BCargoTotal.Text);
+            temp++;
+            if (temp <= 8)
+                sandRock1BCargoTotal.Text = temp.ToString();
+        }
+
+        private void SandRock1BHatchMinus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock1BHatchPlus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2TCargoMinus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2TCargoPlus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2THatchMinus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2THatchPlus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2MCargoMinus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2MCargoPlus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2MHatchMinus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2MHatchPlus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2BCargoMinus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2BCargoPlus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2BHatchMinus_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SandRock2BHatchPlus_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

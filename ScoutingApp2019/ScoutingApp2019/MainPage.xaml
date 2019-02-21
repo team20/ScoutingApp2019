@@ -41,10 +41,41 @@
 
                 <StackLayout Orientation="Vertical" Spacing="30">
                     <!--Rocket 1 ( Far )-->
+                    <!--Top-->
                     <StackLayout Orientation="Horizontal">
                         <Button x:Name="sandRock1TCargoMinus" Text="-" Clicked="SandRock1TCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
                         <Label Text="0" x:Name="sandRock1TCargoTotal" VerticalTextAlignment="Center" />
                         <Button x:Name="sandRock1TCargoPlus" Text="+" Clicked="SandRock1TCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sandRock1THatchMinus" Text="-" Clicked="SandRock1THatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandRock1THatchTotal" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1THatchPlus" Text="+" Clicked="SandRock1THatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    </StackLayout>
+                    <!--Mid-->
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sandRock1MCargoMinus" Text="-" Clicked="SandRock1MCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandRock1MCargoTotal" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1MCargoPlus" Text="+" Clicked="SandRock1MCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sandRock1MHatchMinus" Text="-" Clicked="SandRock1MHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandRock1MHatchTotal" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1MHatchPlus" Text="+" Clicked="SandRock1MHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    </StackLayout>
+                    <!--Bottom-->
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sandRock1BCargoMinus" Text="-" Clicked="SandRock1BCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandRock1BCargoTotal" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1BCargoPlus" Text="+" Clicked="SandRock1BCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="sandRock1BHatchMinus" Text="-" Clicked="SandRock1BHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="0" x:Name="sandRock1BHatchTotal" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1BHatchPlus" Text="+" Clicked="SandRock1BHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
                 </StackLayout>
 
@@ -62,7 +93,46 @@
                         <Button x:Name="sandShipHatchPlus" Text="+" Clicked="SandShipHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
                     </StackLayout>
                 </StackLayout>
+
+                <!--Rocket 2 (Near)-->
+                <!--Top-->
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="sandRock2TCargoMinus" Text="-" Clicked="SandRock2TCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    <Label Text="0" x:Name="sandRock2TCargoTotal" VerticalTextAlignment="Center" />
+                    <Button x:Name="sandRock2TCargoPlus" Text="+" Clicked="SandRock2TCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="sandRock2THatchMinus" Text="-" Clicked="SandRock2THatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    <Label Text="0" x:Name="sandRock2THatchTotal" VerticalTextAlignment="Center" />
+                    <Button x:Name="sandRock2THatchPlus" Text="+" Clicked="SandRock2THatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                </StackLayout>
+                <!--Mid-->
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="sandRock2MCargoMinus" Text="-" Clicked="SandRock2MCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    <Label Text="0" x:Name="sandRock2MCargoTotal" VerticalTextAlignment="Center" />
+                    <Button x:Name="sandRock2MCargoPlus" Text="+" Clicked="SandRock2MCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="sandRock2MHatchMinus" Text="-" Clicked="SandRock2MHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    <Label Text="0" x:Name="sandRock2MHatchTotal" VerticalTextAlignment="Center" />
+                    <Button x:Name="sandRock2MHatchPlus" Text="+" Clicked="SandRock2MHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                </StackLayout>
+                <!--Bottom-->
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="sandRock2BCargoMinus" Text="-" Clicked="SandRock2BCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    <Label Text="0" x:Name="sandRock2BCargoTotal" VerticalTextAlignment="Center" />
+                    <Button x:Name="sandRock2BCargoPlus" Text="+" Clicked="SandRock2BCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="sandRock2BHatchMinus" Text="-" Clicked="SandRock2BHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
+                    <Label Text="0" x:Name="sandRock2BHatchTotal" VerticalTextAlignment="Center" />
+                    <Button x:Name="sandRock2BHatchPlus" Text="+" Clicked="SandRock2BHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                </StackLayout>
             </StackLayout>
+        </StackLayout>
         </StackLayout>
     </ContentPage>
 
