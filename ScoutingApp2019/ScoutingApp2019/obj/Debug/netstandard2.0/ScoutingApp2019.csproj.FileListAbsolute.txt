@@ -1,0 +1,12 @@
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.csproj.CoreCompileInputs.cache
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.AssemblyInfoInputs.cache
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.AssemblyInfo.cs
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\bin\Debug\netstandard2.0\ScoutingApp2019.deps.json
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\bin\Debug\netstandard2.0\ScoutingApp2019.dll
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\bin\Debug\netstandard2.0\ScoutingApp2019.pdb
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.dll
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.pdb
+C:\Users\daddykat\Source\Repos\ScoutingApp2019\ScoutingApp2019\ScoutingApp2019\obj\Debug\netstandard2.0\ScoutingApp2019.csprojAssemblyReference.cache
