@@ -959,20 +959,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\daddykat\\.nuget\\packages\\": {}
+    "C:\\Users\\Andrew\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Andrew\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
       "projectName": "ScoutingApp2019.Android",
-      "projectPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
-      "packagesPath": "C:\\Users\\daddykat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\obj\\",
+      "projectPath": "C:\\Users\\Andrew\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
+      "packagesPath": "C:\\Users\\Andrew\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Andrew\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\daddykat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrew\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -985,8 +985,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj": {
-              "projectPath": "C:\\Users\\daddykat\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj"
+            "C:\\Users\\Andrew\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj": {
+              "projectPath": "C:\\Users\\Andrew\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj"
             }
           }
         }
