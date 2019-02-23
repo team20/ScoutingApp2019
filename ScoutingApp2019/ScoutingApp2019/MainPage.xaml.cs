@@ -129,72 +129,18 @@ namespace ScoutingApp2019
 
         private void SandRock1BHatchMinus_Clicked(object sender, EventArgs e)
         {
-
+            int temp = int.Parse(sandRock1BHatchTotal.Text);
+            temp--;
+            if (temp >= 0)
+                sandRock1BHatchTotal.Text = temp.ToString();
         }
 
         private void SandRock1BHatchPlus_Clicked(object sender, EventArgs e)
         {
-
-        }
-
-        private void SandRock2TCargoMinus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2TCargoPlus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2THatchMinus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2THatchPlus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2MCargoMinus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2MCargoPlus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2MHatchMinus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2MHatchPlus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2BCargoMinus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2BCargoPlus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2BHatchMinus_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SandRock2BHatchPlus_Clicked(object sender, EventArgs e)
-        {
-
+            int temp = int.Parse(sandRock1BHatchTotal.Text);
+            temp++;
+            if (temp <= 8)
+                sandRock1BHatchTotal.Text = temp.ToString();
         }
     }
 }
