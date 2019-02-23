@@ -142,5 +142,191 @@ namespace ScoutingApp2019
             if (temp <= 8)
                 sandRock1BHatchTotal.Text = temp.ToString();
         }
+
+        private void SandFailsHatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandFailsHatchTotal.Text);
+            temp--;
+                sandFailsHatchTotal.Text = temp.ToString();
+        }
+
+        private void SandFailsHatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandFailsHatchTotal.Text);
+            temp++;
+                sandFailsHatchTotal.Text = temp.ToString();
+        }
+
+        private void SandFailsCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandFailsCargoTotal.Text);
+            temp--;
+                sandFailsCargoTotal.Text = temp.ToString();
+        }
+
+        private void SandFailsCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(sandFailsCargoTotal.Text);
+            temp++;
+                sandFailsCargoTotal.Text = temp.ToString();
+        }
+        //TELEOP
+
+        private void TeleShipCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleShipCargoTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleShipCargoTotal.Text = temp.ToString();
+
+        }
+
+        private void Tele_ShipCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleShipCargoTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleShipCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleShipHatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleShipHatchTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleShipHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleShipHatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleShipHatchTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleShipHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1TCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1TCargoTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleRock1TCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1TCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1TCargoTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleRock1TCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1THatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1THatchTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleRock1THatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1THatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1THatchTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleRock1THatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1MCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1MCargoTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleRock1MCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1MCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1MCargoTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleRock1MCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1MHatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1MHatchTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleRock1MHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1MHatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1MHatchTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleRock1MHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1BCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1BCargoTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleRock1BCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1BCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1BCargoTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleRock1BCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1BHatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1BHatchTotal.Text);
+            temp--;
+            if (temp >= 0)
+                teleRock1BHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleRock1BHatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleRock1BHatchTotal.Text);
+            temp++;
+            if (temp <= 8)
+                teleRock1BHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleFailsHatchMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleFailsHatchTotal.Text);
+            temp--;
+            teleFailsHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleFailsHatchPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleFailsHatchTotal.Text);
+            temp++;
+            teleFailsHatchTotal.Text = temp.ToString();
+        }
+
+        private void TeleFailsCargoMinus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleFailsCargoTotal.Text);
+            temp--;
+            teleFailsCargoTotal.Text = temp.ToString();
+        }
+
+        private void TeleFailsCargoPlus_Clicked(object sender, EventArgs e)
+        {
+            int temp = int.Parse(teleFailsCargoTotal.Text);
+            temp++;
+            teleFailsCargoTotal.Text = temp.ToString();
+        }
     }
 }

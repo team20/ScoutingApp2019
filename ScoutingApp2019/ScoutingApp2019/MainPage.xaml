@@ -34,63 +34,91 @@
                 <Label Text="SANDSTORM/AUTO DATA ENTRY" />
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Spacing="150">
-                <StackLayout Orientation="Vertical" Spacing="5">
-                    <Label Text=""></Label>
+            <StackLayout Orientation="Horizontal" Spacing="125">
+                <StackLayout Orientation="Vertical" Spacing="100">
+                    <Label Text="" FontSize="48"></Label>
+                    <Label Text="Top Level" FontSize="24"></Label>
+                    <Label Text="Middle Level" FontSize="24"></Label>
+                    <Label Text="Bottom Level" FontSize="24"></Label>
                 </StackLayout>
 
-                <StackLayout Orientation="Vertical" Spacing="30">
+                <StackLayout Orientation="Vertical" Spacing="100">
                     <!--Rocket 1 ( Far )-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" />
+                    </StackLayout>
                     <!--Top-->
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sandRock1TCargoMinus" Text="-" Clicked="SandRock1TCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandRock1TCargoTotal" VerticalTextAlignment="Center" />
-                        <Button x:Name="sandRock1TCargoPlus" Text="+" Clicked="SandRock1TCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandRock1TCargoMinus" Text="-"  FontSize="24" Clicked="SandRock1TCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandRock1TCargoTotal"  FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1TCargoPlus" Text="+" FontSize="24"  Clicked="SandRock1TCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandRock1THatchMinus" Text="-" FontSize="24" Clicked="SandRock1THatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandRock1THatchTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1THatchPlus" Text="+" FontSize="24" Clicked="SandRock1THatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sandRock1THatchMinus" Text="-" Clicked="SandRock1THatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandRock1THatchTotal" VerticalTextAlignment="Center" />
-                        <Button x:Name="sandRock1THatchPlus" Text="+" Clicked="SandRock1THatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
-                    </StackLayout>
                     <!--Mid-->
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sandRock1MCargoMinus" Text="-" Clicked="SandRock1MCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandRock1MCargoTotal" VerticalTextAlignment="Center" />
-                        <Button x:Name="sandRock1MCargoPlus" Text="+" Clicked="SandRock1MCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandRock1MCargoMinus" Text="-" FontSize="24" Clicked="SandRock1MCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandRock1MCargoTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1MCargoPlus" Text="+" FontSize="24" Clicked="SandRock1MCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandRock1MHatchMinus" Text="-" FontSize="24" Clicked="SandRock1MHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandRock1MHatchTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1MHatchPlus" Text="+" FontSize="24" Clicked="SandRock1MHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sandRock1MHatchMinus" Text="-" Clicked="SandRock1MHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandRock1MHatchTotal" VerticalTextAlignment="Center" />
-                        <Button x:Name="sandRock1MHatchPlus" Text="+" Clicked="SandRock1MHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
-                    </StackLayout>
                     <!--Bottom-->
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sandRock1BCargoMinus" Text="-" Clicked="SandRock1BCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandRock1BCargoTotal" VerticalTextAlignment="Center" />
-                        <Button x:Name="sandRock1BCargoPlus" Text="+" Clicked="SandRock1BCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
-                    </StackLayout>
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandRock1BCargoMinus" Text="-" FontSize="24" Clicked="SandRock1BCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandRock1BCargoTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1BCargoPlus" Text="+" FontSize="24" Clicked="SandRock1BCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
 
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sandRock1BHatchMinus" Text="-" Clicked="SandRock1BHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandRock1BHatchTotal" VerticalTextAlignment="Center" />
-                        <Button x:Name="sandRock1BHatchPlus" Text="+" Clicked="SandRock1BHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandRock1BHatchMinus" Text="-" FontSize="24" Clicked="SandRock1BHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandRock1BHatchTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="sandRock1BHatchPlus" Text="+" FontSize="24" Clicked="SandRock1BHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
                     </StackLayout>
                 </StackLayout>
 
-                <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Vertical" Spacing="100">
                     <!--Cargo Ship-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                    
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sand_ShipCargoMinus" Text="-" Clicked="Sand_ShipCargoMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandShipCargoTotal" VerticalTextAlignment="Center"/>
-                        <Button x:Name="sandShipCargoPlus" Text="+" Clicked="SandShipCargoPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sand_ShipCargoMinus" Text="-" FontSize="24" Clicked="Sand_ShipCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandShipCargoTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandShipCargoPlus" Text="+" FontSize="24" Clicked="SandShipCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandShipHatchMinus" Text="-" FontSize="24" Clicked="SandShipHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandShipHatchTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandShipHatchPlus" Text="+" FontSize="24" Clicked="SandShipHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Fails" FontSize="36" VerticalTextAlignment="Center" />
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="sandShipHatchMinus" Text="-" Clicked="SandShipHatchMinus_Clicked" WidthRequest="40" HeightRequest="40" />
-                        <Label Text="0" x:Name="sandShipHatchTotal" VerticalTextAlignment="Center"/>
-                        <Button x:Name="sandShipHatchPlus" Text="+" Clicked="SandShipHatchPlus_Clicked" WidthRequest="40" HeightRequest="40" />
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandFailsCargoMinus" Text="-" FontSize="24" Clicked="SandFailsCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandFailsCargoTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandFailsCargoPlus" Text="+" FontSize="24" Clicked="SandFailsCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandFailsHatchMinus" Text="-" FontSize="24" Clicked="SandFailsHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="sandFailsHatchTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="sandFailsHatchPlus" Text="+" FontSize="24" Clicked="SandFailsHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
@@ -102,6 +130,96 @@
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
                 <Label Text="TELEOP DATA ENTRY" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="125">
+                <StackLayout Orientation="Vertical" Spacing="100">
+                    <Label Text="" FontSize="48"></Label>
+                    <Label Text="Top Level" FontSize="24"></Label>
+                    <Label Text="Middle Level" FontSize="24"></Label>
+                    <Label Text="Bottom Level" FontSize="24"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Spacing="100">
+                    <!--Rocket 1 ( Far )-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" />
+                    </StackLayout>
+                    <!--Top-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleRock1TCargoMinus" Text="-"  FontSize="24" Clicked="TeleRock1TCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleRock1TCargoTotal"  FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="teleRock1TCargoPlus" Text="+" FontSize="24"  Clicked="TeleRock1TCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleRock1THatchMinus" Text="-" FontSize="24" Clicked="TeleRock1THatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleRock1THatchTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="teleRock1THatchPlus" Text="+" FontSize="24" Clicked="TeleRock1THatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+                    </StackLayout>
+
+                    <!--Mid-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleRock1MCargoMinus" Text="-" FontSize="24" Clicked="TeleRock1MCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleRock1MCargoTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="teleRock1MCargoPlus" Text="+" FontSize="24" Clicked="TeleRock1MCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleRock1MHatchMinus" Text="-" FontSize="24" Clicked="TeleRock1MHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleRock1MHatchTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="teleRock1MHatchPlus" Text="+" FontSize="24" Clicked="TeleRock1MHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+                    </StackLayout>
+
+                    <!--Bottom-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleRock1BCargoMinus" Text="-" FontSize="24" Clicked="TeleRock1BCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleRock1BCargoTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="teleRock1BCargoPlus" Text="+" FontSize="24" Clicked="TeleRock1BCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleRock1BHatchMinus" Text="-" FontSize="24" Clicked="TeleRock1BHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleRock1BHatchTotal" FontSize="24" VerticalTextAlignment="Center" />
+                        <Button x:Name="teleRock1BHatchPlus" Text="+" FontSize="24" Clicked="TeleRock1BHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Spacing="100">
+                    <!--Cargo Ship-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="tele_ShipCargoMinus" Text="-" FontSize="24" Clicked="Tele_ShipCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleShipCargoTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleShipCargoPlus" Text="+" FontSize="24" Clicked="TeleShipCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleShipHatchMinus" Text="-" FontSize="24" Clicked="TeleShipHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleShipHatchTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleShipHatchPlus" Text="+" FontSize="24" Clicked="TeleShipHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+                    </StackLayout>
+
+                    <!--Fails-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Fails" FontSize="36" VerticalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Cargo" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleFailsCargoMinus" Text="-" FontSize="24" Clicked="TeleFailsCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleFailsCargoTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleFailsCargoPlus" Text="+" FontSize="24" Clicked="TeleFailsCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+
+                        <Label Text="Hatch" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleFailsHatchMinus" Text="-" FontSize="24" Clicked="TeleFailsHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" />
+                        <Label Text="0" x:Name="teleFailsHatchTotal" FontSize="24" VerticalTextAlignment="Center"/>
+                        <Button x:Name="teleFailsHatchPlus" Text="+" FontSize="24" Clicked="TeleFailsHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" />
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage>
