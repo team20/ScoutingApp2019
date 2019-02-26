@@ -205,7 +205,7 @@
 
                     <!--Fails-->
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Label Text="Fails" FontSize="36" VerticalTextAlignment="Center"  TextColor="White"/>
+                        <Label Text="Dropped" FontSize="36" VerticalTextAlignment="Center"  TextColor="White"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">

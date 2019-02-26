@@ -965,11 +965,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rike\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
       "projectName": "ScoutingApp2019.Android",
-      "projectPath": "C:\\Users\\Rike\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
+      "projectPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\ScoutingApp2019.Android.csproj",
       "packagesPath": "C:\\Users\\Rike\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rike\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\obj\\",
+      "outputPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -986,8 +986,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\Rike\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj": {
-              "projectPath": "C:\\Users\\Rike\\Source\\Repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj"
+            "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj": {
+              "projectPath": "C:\\Users\\Rike\\source\\repos\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019\\ScoutingApp2019.csproj"
             }
           }
         }
