@@ -1,29 +1,4 @@
-
-Skip to content
-
-    Pull requests
-    Issues
-    Marketplace
-    Explore
-
-    @WilliamKRike
-
-0
-0
-
-    2
-
-Yipten/ScoutingApp2019 Private forked from team20/ScoutingApp2019
-Code
-Pull requests 0
-Projects 0
-Wiki
-Insights
-ScoutingApp2019/.gitignore
-@Yipten Yipten Revert "remove unnecessary files with .gitremove" 09b80fa 5 days ago
-460 lines (364 sloc) 7.5 KB
-
-# Created by https://www.gitignore.io/api/android,windows,visualstudio
+﻿# Created by https://www.gitignore.io/api/android,windows,visualstudio
 # Edit at https://www.gitignore.io/?templates=android,windows,visualstudio
 
 ### Android ###
