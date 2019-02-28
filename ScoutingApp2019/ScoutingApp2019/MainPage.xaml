@@ -227,16 +227,31 @@
     <ContentPage Title="End Game" Padding="10">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
-                <Label Text="Words"></Label>
+                <Image Source="/Resources/drawable/hab.png"></Image>
             </StackLayout>
-        </StackLayout>
-    </ContentPage>
-
-    <ContentPage Title="Performance" Padding="10">
-        <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
-                <Label Text="Words"></Label>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="1" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="2" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="3" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="4" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="5" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="6" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage>
+    
 </TabbedPage>
