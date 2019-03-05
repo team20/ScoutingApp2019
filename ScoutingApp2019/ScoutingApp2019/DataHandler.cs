@@ -5,10 +5,12 @@ namespace ScoutingApp2019 {
         public string ScoutName { get; set; }
         public string Competition { get; set; }
         public int MatchNumber { get; set; }
+        public int ReplayMatch { get; set; }
         public int TeamNumber { get; set; }
+        public string AllianceColor { get; set; }
         public int StartPosition { get; set; }
-        public int Preloaded { get; set; }
-        public int CrossLine { get; set; }
+        public int PreloadedItem { get; set; }
+        public int CrossHabLine { get; set; }
         public int SandCargoShip { get; set; } = 0;
         public int SandCargoRocket1 { get; set; } = 0;
         public int SandCargoRocket2 { get; set; } = 0;
@@ -41,13 +43,16 @@ namespace ScoutingApp2019 {
         }
 
         public void BuildString(string separator) {
-            dataString = ScoutName + separator +
+            dataString =
+                ScoutName + separator +
                 Competition + separator +
                 MatchNumber + separator +
+                ReplayMatch + separator +
                 TeamNumber + separator +
+                AllianceColor + separator +
                 StartPosition + separator +
-                Preloaded + separator +
-                CrossLine + separator +
+                PreloadedItem + separator +
+                CrossHabLine + separator +
                 SandCargoShip + separator +
                 SandCargoRocket1 + separator +
                 SandCargoRocket2 + separator +
@@ -70,7 +75,7 @@ namespace ScoutingApp2019 {
                 TelePanelDrop + separator +
                 HabLevel + separator +
                 HadAssistance + separator +
-                AssistedOthers;     // + "\n";
+                AssistedOthers;
         }
 
         public void WriteToFile() {
@@ -78,6 +83,10 @@ namespace ScoutingApp2019 {
             streamWriter.WriteLineAsync(dataString);
             streamWriter.Close();
             streamWriter.Dispose();
+        }
+
+        public void SendViaBluetooth() {
+            //need to research how to do this
         }
     }
 }

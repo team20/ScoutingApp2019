@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Android.Content;
+using Android.Widget;
+using System;
 using Xamarin.Forms;
 
 namespace ScoutingApp2019 {
@@ -13,8 +14,20 @@ namespace ScoutingApp2019 {
         }
 
         private void SubmitButton_Clicked(object sender, EventArgs e) {
-            data.BuildString("\t");
-            data.WriteToFile();
+            if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1)
+                Toast.MakeText(Android.App.Application.Context, "Not all data entries are filled", ToastLength.Long).Show();
+            else {
+                data.ScoutName = NameEntry.Text;
+                data.MatchNumber = int.Parse(MatchEntry.Text);
+                data.ReplayMatch = ReplaySwitch.IsToggled ? 1 : 0;
+                data.TeamNumber = int.Parse(RobotNumEntry.Text);
+                data.AllianceColor = (string)AllianceColorPicker.SelectedItem;
+                data.StartPosition = int.Parse(StartPositionEntry.Text);
+                data.PreloadedItem = PreloadedItemPicker.SelectedIndex;
+                data.CrossHabLine = CrossHabLineSwitch.IsToggled ? 1 : 0;
+                data.BuildString("\t");
+                data.WriteToFile();
+            }
         }
 
         private void SandCargoShipPlus_Clicked(object sender, EventArgs e) {
@@ -29,12 +42,12 @@ namespace ScoutingApp2019 {
 
         private void SandShipHatchMinus_Clicked(object sender, EventArgs e) {
             if (data.SandPanelShip > 0)
-                SandCargoShipTotal.Text = (--data.SandPanelShip).ToString();
+                sandShipHatchTotal.Text = (--data.SandPanelShip).ToString();
         }
 
         private void SandShipHatchPlus_Clicked(object sender, EventArgs e) {
             if (data.SandPanelShip < 8)
-                SandCargoShipTotal.Text = (++data.SandPanelShip).ToString();
+                sandShipHatchTotal.Text = (++data.SandPanelShip).ToString();
         }
 
         private void SandRocketTCargoMinus_Clicked(object sender, EventArgs e) {
