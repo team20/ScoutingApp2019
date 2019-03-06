@@ -1,6 +1,4 @@
-﻿using Android.Content;
-using Android.Widget;
-using System;
+﻿using System;
 using Xamarin.Forms;
 
 namespace ScoutingApp2019 {
@@ -11,11 +9,32 @@ namespace ScoutingApp2019 {
             InitializeComponent();
 
             data = new DataHandler("/storage/emulated/0/Android/data/com.companyname.ScoutingApp2019.Android/files/testfile.txt");
+            //data = new DataHandler("/storage/sdcard0/testfile.txt");
+        }
+
+        private void MainTabbedPage_CurrentPageChanged(object sender, EventArgs e) {
+            switch (MainTabbedPage.CurrentPage.TabIndex) {
+                case 0:
+                    BarBackgroundColor = new Color(0.0, 0.6, 0.0);
+                    break;
+                case 1:
+                    BarBackgroundColor = new Color(0.5, 0.3, 0.0);
+                    break;
+                case 2:
+                    BarBackgroundColor = new Color(0.7, 0.0, 0.0);
+                    break;
+                case 3:
+                    BarBackgroundColor = new Color(0.0, 0.0, 0.6);
+                    break;
+                default:
+                    BarBackgroundColor = new Color(0.0, 0.0, 0.0);
+                    break;
+            }
         }
 
         private void SubmitButton_Clicked(object sender, EventArgs e) {
             if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1)
-                Toast.MakeText(Android.App.Application.Context, "Not all data entries are filled", ToastLength.Long).Show();
+                DisplayAlert("Error", "Not all data entries are filled", "OK");
             else {
                 data.ScoutName = NameEntry.Text;
                 data.MatchNumber = int.Parse(MatchEntry.Text);
@@ -27,6 +46,8 @@ namespace ScoutingApp2019 {
                 data.CrossHabLine = CrossHabLineSwitch.IsToggled ? 1 : 0;
                 data.BuildString("\t");
                 data.WriteToFile();
+                DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
+                CurrentPage = new MainPage();
             }
         }
 
