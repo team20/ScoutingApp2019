@@ -10,6 +10,7 @@ namespace ScoutingApp2019 {
         public string AllianceColor { get; set; }
         public int StartPosition { get; set; }
         public int PreloadedItem { get; set; }
+        //SANDSTORM
         public int CrossHabLine { get; set; }
         public int SandCargoShip { get; set; } = 0;
         public int SandCargoRocket1 { get; set; } = 0;
@@ -21,6 +22,7 @@ namespace ScoutingApp2019 {
         public int SandPanelRocket2 { get; set; } = 0;
         public int SandPanelRocket3 { get; set; } = 0;
         public int SandPanelDrop { get; set; } = 0;
+        //Teleop
         public int TeleCargoShip { get; set; } = 0;
         public int TeleCargoRocket1 { get; set; } = 0;
         public int TeleCargoRocket2 { get; set; } = 0;
@@ -31,6 +33,7 @@ namespace ScoutingApp2019 {
         public int TelePanelRocket2 { get; set; } = 0;
         public int TelePanelRocket3 { get; set; } = 0;
         public int TelePanelDrop { get; set; } = 0;
+        //END
         public int HabLevel { get; set; }
         public int HadAssistance { get; set; }
         public int AssistedOthers { get; set; }
