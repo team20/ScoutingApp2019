@@ -8,7 +8,8 @@ namespace ScoutingApp2019 {
         public MainPage() {
             InitializeComponent();
 
-            data = new DataHandler("/storage/emulated/0/Android/data/com.companyname.ScoutingApp2019.Android/files/testfile.txt");
+            data = new DataHandler("/storage/emulated/0/Download/testfile.txt");
+            //data = new DataHandler("/storage/emulated/0/Android/data/com.companyname.ScoutingApp2019.Android/files/testfile.txt");
             //data = new DataHandler("/storage/sdcard0/testfile.txt");
         }
 
@@ -33,7 +34,7 @@ namespace ScoutingApp2019 {
         }
 
         private void SubmitButton_Clicked(object sender, EventArgs e) {
-            if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1)
+            if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1 || HabLevelAttemptedPicker.SelectedIndex == -1)
                 DisplayAlert("Error", "Not all data entries are filled", "OK");
             else {
                 data.ScoutName = NameEntry.Text;
@@ -43,11 +44,14 @@ namespace ScoutingApp2019 {
                 data.AllianceColor = (string)AllianceColorPicker.SelectedItem;
                 data.StartPosition = int.Parse(StartPositionEntry.Text);
                 data.PreloadedItem = PreloadedItemPicker.SelectedIndex;
-                data.HabLevel = HabLevelPicker.SelectedIndex;
                 data.CrossHabLine = CrossHabLineSwitch.IsToggled ? 1 : 0;
+                data.HabLevelAchieved = HabLevelAttemptedPicker.SelectedIndex;
                 data.HadAssistance = EndHelped.IsToggled ? 1 : 0;
                 data.AssistedOthers = EndAssist.IsToggled ? 1 : 0;
+                data.HabLevelAttempted = HabLevelAttemptedPicker.SelectedIndex;
+                data.HabLevelAchieved = HabLevelAchievedPicker.SelectedIndex;
                 data.BuildString("\t");
+                //TODO: catch "permission not granted" error with an alert
                 data.WriteToFile();
                 DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
                 CurrentPage = new MainPage();

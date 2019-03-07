@@ -3,7 +3,6 @@
 namespace ScoutingApp2019 {
     public class DataHandler {
         public string ScoutName { get; set; }
-        public string Competition { get; set; }
         public int MatchNumber { get; set; }
         public int ReplayMatch { get; set; }
         public int TeamNumber { get; set; }
@@ -34,10 +33,10 @@ namespace ScoutingApp2019 {
         public int TelePanelRocket3 { get; set; } = 0;
         public int TelePanelDrop { get; set; } = 0;
         //END
-        public int HabLevel { get; set; }
+        public int HabLevelAchieved { get; set; }
+        public int HabLevelAttempted { get; set; }
         public int HadAssistance { get; set; }
         public int AssistedOthers { get; set; }
-        public int ClimbSuccess { get; set; }
 
         private readonly string filePath;
         private string dataString;
@@ -49,7 +48,6 @@ namespace ScoutingApp2019 {
         public void BuildString(string separator) {
             dataString =
                 ScoutName + separator +
-                Competition + separator +
                 MatchNumber + separator +
                 ReplayMatch + separator +
                 TeamNumber + separator +
@@ -77,7 +75,8 @@ namespace ScoutingApp2019 {
                 TelePanelRocket2 + separator +
                 TelePanelRocket3 + separator +
                 TelePanelDrop + separator +
-                HabLevel + separator +
+                HabLevelAchieved + separator +
+                HabLevelAttempted + separator +
                 HadAssistance + separator +
                 AssistedOthers;
         }
