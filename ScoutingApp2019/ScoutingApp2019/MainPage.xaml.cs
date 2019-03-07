@@ -43,7 +43,10 @@ namespace ScoutingApp2019 {
                 data.AllianceColor = (string)AllianceColorPicker.SelectedItem;
                 data.StartPosition = int.Parse(StartPositionEntry.Text);
                 data.PreloadedItem = PreloadedItemPicker.SelectedIndex;
+                data.HabLevel = HabLevelPicker.SelectedIndex;
                 data.CrossHabLine = CrossHabLineSwitch.IsToggled ? 1 : 0;
+                data.HadAssistance = EndHelped.IsToggled ? 1 : 0;
+                data.AssistedOthers = EndAssist.IsToggled ? 1 : 0;
                 data.BuildString("\t");
                 data.WriteToFile();
                 DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");

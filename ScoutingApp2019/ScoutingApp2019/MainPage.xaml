@@ -7,7 +7,7 @@
             BackgroundColor="Black"
             BarTextColor="White"
             CurrentPageChanged="MainTabbedPage_CurrentPageChanged">
-    
+
     <!--
     Things to do:
     -move cargo/hatch labels to above buttons
@@ -126,7 +126,7 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
                         <Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center"  TextColor="White"/>
                     </StackLayout>
-                    
+
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
                         <Button x:Name="SandCargoShipMinus" Text="-" FontSize="24" Clicked="SandCargoShipMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
@@ -258,10 +258,34 @@
     <ContentPage Title="End Game" Padding="10" TabIndex="3">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal" Spacing="125">
-                <StackLayout Orientation="Vertical" Spacing="100">
+                <StackLayout Orientation="Vertical" Spacing="60">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="Resources/drawable/hab.png" HorizontalOptions="Center" WidthRequest="200" />
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Which Hab Level?" TextColor="White" FontSize="24" VerticalOptions="Center" />
+                                <Picker x:Name="HabLevelPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+                                <Picker.Items>
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Was Helped?" TextColor="White" FontSize="24"/>
+                        <Switch x:Name="EndHelped" Scale="1.5" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Assisted Others?" TextColor="White" FontSize="24"/>
+                        <Switch x:Name="EndAssist" Scale="1.5"/>
+                    </StackLayout>
                     <Button x:Name="SubmitButton" Text="Submit" FontSize="24" Clicked="SubmitButton_Clicked"/>
                 </StackLayout>
             </StackLayout>
+            <Image Source="Resources/drawable/logo.png" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage>
 </TabbedPage>
