@@ -34,6 +34,7 @@ namespace ScoutingApp2019 {
         public int HabLevel { get; set; }
         public int HadAssistance { get; set; }
         public int AssistedOthers { get; set; }
+        public int ClimbSuccess { get; set; }
 
         private readonly string filePath;
         private string dataString;
