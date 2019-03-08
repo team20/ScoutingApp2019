@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoutingApp2019.Android", "ScoutingApp2019\ScoutingApp2019.Android\ScoutingApp2019.Android.csproj", "{9F4A6BFF-8DD9-42D9-9C44-378F23B1FB58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoutingApp2019", "ScoutingApp2019\ScoutingApp2019\ScoutingApp2019.csproj", "{3F7CF73D-CFA3-4016-8845-BDA9DC4885DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoutingApp2019", "ScoutingApp2019\ScoutingApp2019\ScoutingApp2019.csproj", "{3F7CF73D-CFA3-4016-8845-BDA9DC4885DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

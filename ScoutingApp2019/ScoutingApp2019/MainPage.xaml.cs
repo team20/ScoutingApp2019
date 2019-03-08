@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ScoutingApp2019 {
@@ -7,9 +8,9 @@ namespace ScoutingApp2019 {
 
         public MainPage() {
             InitializeComponent();
-
-            data = new DataHandler("/storage/emulated/0/Android/data/com.companyname.ScoutingApp2019.Android/files/testfile.txt");
-            //data = new DataHandler("/storage/sdcard0/testfile.txt");
+            
+            data = new DataHandler("/storage/emulated/0/Download/", "tvr_full_data", "tvr_partial_data_");
+            ResetAll();
         }
 
         private void MainTabbedPage_CurrentPageChanged(object sender, EventArgs e) {
@@ -33,7 +34,7 @@ namespace ScoutingApp2019 {
         }
 
         private void SubmitButton_Clicked(object sender, EventArgs e) {
-            if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1)
+            if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1 || HabLevelAttemptedPicker.SelectedIndex == -1 || HabLevelAchievedPicker.SelectedIndex == -1 || NewFilePicker.SelectedIndex == -1)
                 DisplayAlert("Error", "Not all data entries are filled", "OK");
             else {
                 data.ScoutName = NameEntry.Text;
@@ -43,15 +44,82 @@ namespace ScoutingApp2019 {
                 data.AllianceColor = (string)AllianceColorPicker.SelectedItem;
                 data.StartPosition = int.Parse(StartPositionEntry.Text);
                 data.PreloadedItem = PreloadedItemPicker.SelectedIndex;
-                data.HabLevel = HabLevelPicker.SelectedIndex;
                 data.CrossHabLine = CrossHabLineSwitch.IsToggled ? 1 : 0;
+                data.HabLevelAchieved = HabLevelAttemptedPicker.SelectedIndex;
                 data.HadAssistance = EndHelped.IsToggled ? 1 : 0;
                 data.AssistedOthers = EndAssist.IsToggled ? 1 : 0;
+                data.HabLevelAttempted = HabLevelAttemptedPicker.SelectedIndex;
+                data.HabLevelAchieved = HabLevelAchievedPicker.SelectedIndex;
+                data.Comments = CommentsEntry.Text;
                 data.BuildString("\t");
-                data.WriteToFile();
+                //TODO: catch "permission not granted" error with an alert
+                data.WriteToFile(NewFilePicker.SelectedIndex == 0);
                 DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
+                ResetAll();
                 CurrentPage = new MainPage();
             }
+        }
+
+        private void ResetAll() {
+            //page 1
+            NameEntry.Text = "";
+            MatchEntry.Text = "";
+            ReplaySwitch.IsToggled = false;
+            RobotNumEntry.Text = "";
+            AllianceColorPicker.SelectedIndex = -1;
+            StartPositionEntry.Text = "";
+            PreloadedItemPicker.SelectedIndex = -1;
+            //page 2
+            CrossHabLineSwitch.IsToggled = false;
+            sandRocketBCargoTotal.Text = "0";
+            sandRocketBHatchTotal.Text = "0";
+            sandRocketMCargoTotal.Text = "0";
+            sandRocketMHatchTotal.Text = "0";
+            sandRocketTCargoTotal.Text = "0";
+            sandRocketTHatchTotal.Text = "0";
+            SandCargoShipTotal.Text = "0";
+            sandShipHatchTotal.Text = "0";
+            sandFailsCargoTotal.Text = "0";
+            sandFailsHatchTotal.Text = "0";
+            //page 3
+            teleRocketBCargoTotal.Text = "0";
+            teleRocketBHatchTotal.Text = "0";
+            teleRocketMCargoTotal.Text = "0";
+            teleRocketMHatchTotal.Text = "0";
+            teleRocketTCargoTotal.Text = "0";
+            teleRocketTHatchTotal.Text = "0";
+            teleShipCargoTotal.Text = "0";
+            teleShipHatchTotal.Text = "0";
+            teleFailsCargoTotal.Text = "0";
+            teleFailsHatchTotal.Text = "0";
+            //page 4
+            HabLevelAttemptedPicker.SelectedIndex = -1;
+            HabLevelAchievedPicker.SelectedIndex = -1;
+            EndHelped.IsToggled = false;
+            EndAssist.IsToggled = false;
+            CommentsEntry.Text = "";
+            NewFilePicker.SelectedIndex = 1;
+            //data variables
+            data.SandCargoShip = 0;
+            data.SandCargoRocket1 = 0;
+            data.SandCargoRocket2 = 0;
+            data.SandCargoRocket3 = 0;
+            data.SandCargoDrop = 0;
+            data.SandPanelShip = 0;
+            data.SandPanelRocket1 = 0;
+            data.SandPanelRocket2 = 0;
+            data.SandPanelRocket3 = 0;
+            data.SandPanelDrop = 0;
+            data.TeleCargoShip = 0;
+            data.TeleCargoRocket1 = 0;
+            data.TeleCargoRocket2 = 0;
+            data.TeleCargoRocket3 = 0;
+            data.TeleCargoDrop = 0;
+            data.TelePanelShip = 0;
+            data.TelePanelRocket1 = 0;
+            data.TelePanelRocket2 = 0;
+            data.TelePanelRocket3 = 0;
+            data.TelePanelDrop = 0;
         }
 
         private void SandCargoShipPlus_Clicked(object sender, EventArgs e) {
