@@ -61,10 +61,6 @@
                         </Picker.Items>
                     </Picker>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-                    <Switch x:Name="CrossHabLineSwitch"/>
-                </StackLayout>
             </StackLayout>
         </ScrollView>
 
@@ -74,6 +70,10 @@
     <ContentPage Title="Sandstorm" Padding="10" TabIndex="1">
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+                    <Switch x:Name="CrossHabLineSwitch"/>
+                </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="125">
                     <StackLayout Orientation="Vertical" Spacing="100">
                         <Label Text="" FontSize="48" TextColor="White" ></Label>
@@ -268,7 +268,7 @@
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout Orientation="Vertical">
                 <StackLayout Orientation="Horizontal" Spacing="125">
-                    <StackLayout Orientation="Vertical" Spacing="60">
+                    <StackLayout Orientation="Vertical" Spacing="50">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="Resources/drawable/hab.png" HorizontalOptions="Center" WidthRequest="200" />
                             <StackLayout Orientation="Vertical">
@@ -302,11 +302,25 @@
                             <Label Text="Assisted Others?" TextColor="White" FontSize="24"/>
                             <Switch x:Name="EndAssist"/>
                         </StackLayout>
-                        <Button x:Name="SubmitButton" Text="Submit" FontSize="24" Clicked="SubmitButton_Clicked"/>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Comments (include fouls)" TextColor="White" FontSize="24"/>
+                                <Entry x:Name="CommentsEntry" FontSize="24" Keyboard="Text" WidthRequest="500" TextColor="Black" BackgroundColor="White"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Start new file?" VerticalOptions="Center" TextColor="White" FontSize="24"/>
+                            <Picker x:Name="NewFilePicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+                                <Picker.Items>
+                                    <x:String>Yes</x:String>
+                                    <x:String>No</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Button x:Name="SubmitButton" Text="Submit" FontSize="24" Clicked="SubmitButton_Clicked"/>
+                        </StackLayout>
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
-
     </ContentPage>
 </TabbedPage>

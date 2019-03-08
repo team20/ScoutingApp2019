@@ -37,12 +37,18 @@ namespace ScoutingApp2019 {
         public int HabLevelAttempted { get; set; }
         public int HadAssistance { get; set; }
         public int AssistedOthers { get; set; }
+        public string Comments { get; set; }
 
         private readonly string filePath;
+        private readonly string fullDataName;
+        private readonly string partialDataPrefix;
+        private int partialDataNum;
         private string dataString;
 
-        public DataHandler(string filePath) {
+        public DataHandler(string filePath, string fullDataName, string partialDataPrefix) {
             this.filePath = filePath;
+            this.fullDataName = fullDataName;
+            this.partialDataPrefix = partialDataPrefix;
         }
 
         public void BuildString(string separator) {
@@ -78,14 +84,28 @@ namespace ScoutingApp2019 {
                 HabLevelAchieved + separator +
                 HabLevelAttempted + separator +
                 HadAssistance + separator +
-                AssistedOthers;
+                AssistedOthers + separator +
+                Comments;
         }
 
-        public void WriteToFile() {
-            StreamWriter streamWriter = new StreamWriter(filePath, true);
-            streamWriter.WriteLineAsync(dataString);
-            streamWriter.Close();
-            streamWriter.Dispose();
+        public void WriteToFile(bool newFile) {
+            bool hasNumber = false;
+            for (int i = 0; !hasNumber; i++)
+                if (!File.Exists(filePath + partialDataPrefix + i + ".txt")) {
+                    if (newFile)
+                        partialDataNum = i;
+                    else
+                        partialDataNum = i - 1;
+                    hasNumber = true;
+                }
+            StreamWriter fullDataStreamWriter = new StreamWriter(filePath + fullDataName + ".txt", true);
+            StreamWriter partialDataStreamWriter = new StreamWriter(filePath + partialDataPrefix + partialDataNum + ".txt", true);
+            fullDataStreamWriter.WriteLineAsync(dataString);
+            partialDataStreamWriter.WriteLineAsync(dataString);
+            fullDataStreamWriter.Close();
+            partialDataStreamWriter.Close();
+            fullDataStreamWriter.Dispose();
+            partialDataStreamWriter.Dispose();
         }
 
         public void SendViaBluetooth() {
