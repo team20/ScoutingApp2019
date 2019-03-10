@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using Android.Bluetooth;
+using Android.Content;
+using Android.Widget;
+using System.IO;
 
 namespace ScoutingApp2019 {
     public class DataHandler {
@@ -109,7 +112,13 @@ namespace ScoutingApp2019 {
         }
 
         public void SendViaBluetooth() {
-            //need to research how to do this
+            //TODO: I'm pretty sure that this stuff should go in "MainActivity.cs" instead of here (info found here: http://blog.xamarians.com/Blog/2017/6/29/transfer-file-via-bluetooth-in-android)
+            //BluetoothAdapter bluetoothAdapter = BluetoothAdapter.DefaultAdapter;
+            //if (bluetoothAdapter == null) {
+            //    Toast.MakeText(Android.App.Application.Context, "Bluetooth not available", ToastLength.Long).Show();
+            //    return;
+            //}
+            //Intent enableBluetooth = new Intent(BluetoothAdapter.ActionRequestEnable);
         }
     }
 }
