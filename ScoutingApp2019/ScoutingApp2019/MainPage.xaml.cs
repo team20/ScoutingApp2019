@@ -123,83 +123,115 @@ namespace ScoutingApp2019 {
         }
 
         private void SandCargoShipPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoShip < 8)
+            if (data.SandCargoShip < 8 && CrossHabLineSwitch.IsToggled)
                 SandCargoShipTotal.Text = (++data.SandCargoShip).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandCargoShipMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoShip > 0)
+            if (data.SandCargoShip > 0 && CrossHabLineSwitch.IsToggled)
                 SandCargoShipTotal.Text = (--data.SandCargoShip).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandShipHatchMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelShip > 0)
+            if (data.SandPanelShip > 0 && CrossHabLineSwitch.IsToggled)
                 sandShipHatchTotal.Text = (--data.SandPanelShip).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandShipHatchPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelShip < 8)
+            if (data.SandPanelShip < 8 && CrossHabLineSwitch.IsToggled)
                 sandShipHatchTotal.Text = (++data.SandPanelShip).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketTCargoMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoRocket3 > 0)
+            if (data.SandCargoRocket3 > 0 && CrossHabLineSwitch.IsToggled)
                 sandRocketTCargoTotal.Text = (--data.SandCargoRocket3).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketTCargoPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoRocket3 < 4)
+            if (data.SandCargoRocket3 < 4 && CrossHabLineSwitch.IsToggled)
                 sandRocketTCargoTotal.Text = (++data.SandCargoRocket3).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketTHatchMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelRocket3 > 0)
+            if (data.SandPanelRocket3 > 0 && CrossHabLineSwitch.IsToggled)
                 sandRocketTHatchTotal.Text = (--data.SandPanelRocket3).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketTHatchPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelRocket3 < 4)
+            if (data.SandPanelRocket3 < 4 && CrossHabLineSwitch.IsToggled)
                 sandRocketTHatchTotal.Text = (++data.SandPanelRocket3).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketMCargoMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoRocket2 > 0)
+            if (data.SandCargoRocket2 > 0 && CrossHabLineSwitch.IsToggled)
                 sandRocketMCargoTotal.Text = (--data.SandCargoRocket2).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketMCargoPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoRocket2 < 4)
+            if (data.SandCargoRocket2 < 4 && CrossHabLineSwitch.IsToggled)
                 sandRocketMCargoTotal.Text = (++data.SandCargoRocket2).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketMHatchMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelRocket2 > 0)
+            if (data.SandPanelRocket2 > 0 && CrossHabLineSwitch.IsToggled)
                 sandRocketMHatchTotal.Text = (--data.SandPanelRocket2).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketMHatchPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelRocket2 < 4)
+            if (data.SandPanelRocket2 < 4 && CrossHabLineSwitch.IsToggled)
                 sandRocketMHatchTotal.Text = (++data.SandPanelRocket2).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketBCargoMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoRocket1 > 0)
+            if (data.SandCargoRocket1 > 0 && CrossHabLineSwitch.IsToggled)
                 sandRocketBCargoTotal.Text = (--data.SandCargoRocket1).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketBCargoPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandCargoRocket1 < 4)
+            if (data.SandCargoRocket1 < 4 && CrossHabLineSwitch.IsToggled)
                 sandRocketBCargoTotal.Text = (++data.SandCargoRocket1).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketBHatchMinus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelRocket1 > 0)
+            if (data.SandPanelRocket1 > 0 && CrossHabLineSwitch.IsToggled)
                 sandRocketBHatchTotal.Text = (--data.SandPanelRocket1).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandRocketBHatchPlus_Clicked(object sender, EventArgs e) {
-            if (data.SandPanelRocket1 < 4)
+            if (data.SandPanelRocket1 < 4 && CrossHabLineSwitch.IsToggled)
                 sandRocketBHatchTotal.Text = (++data.SandPanelRocket1).ToString();
+            else if (!CrossHabLineSwitch.IsToggled)
+                DisplayAlert("Error", "Game pieces cannot be scored without crossing the HAB LINE", "OK");
         }
 
         private void SandFailsHatchMinus_Clicked(object sender, EventArgs e) {
