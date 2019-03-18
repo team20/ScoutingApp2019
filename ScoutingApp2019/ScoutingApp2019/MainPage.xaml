@@ -6,14 +6,8 @@
             Title="Scouting App 2019"
             BackgroundColor="Black"
             BarTextColor="White"
-            CurrentPageChanged="MainTabbedPage_CurrentPageChanged"
-            >
+            CurrentPageChanged="MainTabbedPage_CurrentPageChanged">
 
-    <!--
-    Things to do:
-    -move cargo/hatch labels to above buttons
-    -
-    -->
     <!--PAGE 1 START-->
     <ContentPage Title="Start" Padding="10" TabIndex="0">
         <ScrollView VerticalScrollBarVisibility="Never">
@@ -72,7 +66,7 @@
             <StackLayout Orientation="Vertical">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-                    <Switch x:Name="CrossHabLineSwitch"/>
+                    <Switch x:Name="CrossHabLineSwitch" Toggled="CrossHabLineSwitch_Toggled"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="125">
                     <StackLayout Orientation="Vertical" Spacing="100">

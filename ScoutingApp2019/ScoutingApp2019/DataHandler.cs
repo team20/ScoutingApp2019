@@ -1,6 +1,4 @@
-﻿using Android.Bluetooth;
-using Android.Content;
-using Android.Widget;
+﻿//using System.Data.SQLite;
 using System.IO;
 
 namespace ScoutingApp2019 {
@@ -42,16 +40,32 @@ namespace ScoutingApp2019 {
         public int AssistedOthers { get; set; }
         public string Comments { get; set; }
 
+        //private readonly SQLiteConnection connection;
+
         private readonly string filePath;
         private readonly string fullDataName;
         private readonly string partialDataPrefix;
+
         private int partialDataNum;
         private string dataString;
+        //private string query;
 
         public DataHandler(string filePath, string fullDataName, string partialDataPrefix) {
             this.filePath = filePath;
             this.fullDataName = fullDataName;
             this.partialDataPrefix = partialDataPrefix;
+
+            //SQLite stuff
+            //if (File.Exists(filePath + fullDataName + ".sqlite"))
+            //    connection = new SQLiteConnection("Data Source = " + filePath + fullDataName + ".sqlite; Version = 3");
+            //else {
+            //    SQLiteConnection.CreateFile(filePath + fullDataName + ".sqlite");
+            //    connection = new SQLiteConnection("Data Source = " + filePath + fullDataName + ".sqlite; Version = 3");
+            //    connection.Open();
+            //    string createStatement = "CREATE TABLE teams(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, number INTEGER NOT NULL UNIQUE, name TEXT NOT NULL);";
+            //    SQLiteCommand command = new SQLiteCommand(createStatement, connection);
+            //    connection.Close();
+            //}
         }
 
         public void BuildString(string separator) {
@@ -91,7 +105,7 @@ namespace ScoutingApp2019 {
                 Comments;
         }
 
-        public void WriteToFile(bool newFile) {
+        public void WriteToTextFile(bool newFile) {
             bool hasNumber = false;
             for (int i = 0; !hasNumber; i++)
                 if (!File.Exists(filePath + partialDataPrefix + i + ".txt")) {
@@ -111,14 +125,48 @@ namespace ScoutingApp2019 {
             partialDataStreamWriter.Dispose();
         }
 
-        public void SendViaBluetooth() {
-            //TODO: I'm pretty sure that this stuff should go in "MainActivity.cs" instead of here (info found here: http://blog.xamarians.com/Blog/2017/6/29/transfer-file-via-bluetooth-in-android)
-            //BluetoothAdapter bluetoothAdapter = BluetoothAdapter.DefaultAdapter;
-            //if (bluetoothAdapter == null) {
-            //    Toast.MakeText(Android.App.Application.Context, "Bluetooth not available", ToastLength.Long).Show();
-            //    return;
-            //}
-            //Intent enableBluetooth = new Intent(BluetoothAdapter.ActionRequestEnable);
-        }
+        //public void BuildQuery() {
+        //    query = "INSERT INTO raw_data VALUES (" +
+        //        ScoutName + ", " +
+        //        MatchNumber + ", " +
+        //        ReplayMatch + ", " +
+        //        TeamNumber + ", " +
+        //        AllianceColor + ", " +
+        //        StartPosition + ", " +
+        //        PreloadedItem + ", " +
+        //        CrossHabLine + ", " +
+        //        SandCargoShip + ", " +
+        //        SandCargoRocket1 + ", " +
+        //        SandCargoRocket2 + ", " +
+        //        SandCargoRocket3 + ", " +
+        //        SandCargoDrop + ", " +
+        //        SandPanelShip + ", " +
+        //        SandPanelRocket1 + ", " +
+        //        SandPanelRocket2 + ", " +
+        //        SandPanelRocket3 + ", " +
+        //        SandPanelDrop + ", " +
+        //        TeleCargoShip + ", " +
+        //        TeleCargoRocket1 + ", " +
+        //        TeleCargoRocket2 + ", " +
+        //        TeleCargoRocket3 + ", " +
+        //        TeleCargoDrop + ", " +
+        //        TelePanelShip + ", " +
+        //        TelePanelRocket1 + ", " +
+        //        TelePanelRocket2 + ", " +
+        //        TelePanelRocket3 + ", " +
+        //        TelePanelDrop + ", " +
+        //        HabLevelAchieved + ", " +
+        //        HabLevelAttempted + ", " +
+        //        HadAssistance + ", " +
+        //        AssistedOthers + ", " +
+        //        Comments + ");";
+        //}
+
+        //public void WriteToDatabase() {
+        //    connection.Open();
+        //    SQLiteCommand command = new SQLiteCommand(query, connection);
+        //    command.ExecuteNonQueryAsync();
+        //    connection.Close();
+        //}
     }
 }

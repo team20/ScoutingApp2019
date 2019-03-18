@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ScoutingApp2019 {
     public partial class MainPage : TabbedPage {
-        public DataHandler data;
+        private DataHandler data;
+        private Timer sandstormPageTimer;
 
         public MainPage() {
             InitializeComponent();
-            
-            data = new DataHandler("/storage/emulated/0/Download/", "tvr_full_data", "tvr_partial_data_");
+
+            data = new DataHandler("/storage/emulated/0/Download/", "2019_hvr_full_data", "2019_hvr_partial_data_");
             ResetAll();
         }
 
@@ -53,7 +53,7 @@ namespace ScoutingApp2019 {
                 data.Comments = CommentsEntry.Text;
                 data.BuildString("\t");
                 //TODO: catch "permission not granted" error with an alert
-                data.WriteToFile(NewFilePicker.SelectedIndex == 0);
+                data.WriteToTextFile(NewFilePicker.SelectedIndex == 0);
                 DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
                 ResetAll();
                 CurrentPage = new MainPage();
@@ -120,6 +120,40 @@ namespace ScoutingApp2019 {
             data.TelePanelRocket2 = 0;
             data.TelePanelRocket3 = 0;
             data.TelePanelDrop = 0;
+        }
+
+        private async void CrossHabLineSwitch_Toggled(object sender, ToggledEventArgs e) {
+            //TODO: put code here to warn the user that all values on the sandstorm page will be reset to zero if the switch is turned off
+            if (!CrossHabLineSwitch.IsToggled) {
+                if (data.SandCargoShip > 0 ||
+                    data.SandCargoRocket1 > 0 ||
+                    data.SandCargoRocket2 > 0 ||
+                    data.SandCargoRocket3 > 0 ||
+                    data.SandPanelShip > 0 ||
+                    data.SandPanelRocket1 > 0 ||
+                    data.SandPanelRocket1 > 0 ||
+                    data.SandPanelRocket3 > 0) {
+                    if (await DisplayAlert("Warning", "All values on the Sandstorm page will be reset to zero because nothing can be scored if the robot hasn't crossed the HAB Line. Do you want to continue?", "Yes", "No")) {
+                        sandRocketBCargoTotal.Text = "0";
+                        sandRocketBHatchTotal.Text = "0";
+                        sandRocketMCargoTotal.Text = "0";
+                        sandRocketMHatchTotal.Text = "0";
+                        sandRocketTCargoTotal.Text = "0";
+                        sandRocketTHatchTotal.Text = "0";
+                        SandCargoShipTotal.Text = "0";
+                        sandShipHatchTotal.Text = "0";
+                        data.SandCargoShip = 0;
+                        data.SandCargoRocket1 = 0;
+                        data.SandCargoRocket2 = 0;
+                        data.SandCargoRocket3 = 0;
+                        data.SandPanelShip = 0;
+                        data.SandPanelRocket1 = 0;
+                        data.SandPanelRocket2 = 0;
+                        data.SandPanelRocket3 = 0;
+                    } else
+                        CrossHabLineSwitch.IsToggled = true;
+                }
+            }
         }
 
         private void SandCargoShipPlus_Clicked(object sender, EventArgs e) {
