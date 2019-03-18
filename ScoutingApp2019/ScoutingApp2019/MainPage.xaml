@@ -77,47 +77,47 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Spacing="100">
-                        <!--Rocket 1 ( Far )-->
+                        <!--Rocket-->
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                             <Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White" />
                         </StackLayout>
                         <!--Top-->
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandRocketTCargoMinus" Text="-"  FontSize="24" Clicked="SandRocketTCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketTCargoMinus" Text="-"  FontSize="24" Clicked="SandRocketTCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandRocketTCargoTotal"  FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                            <Button x:Name="sandRocketTCargoPlus" Text="+" FontSize="24"  Clicked="SandRocketTCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketTCargoPlus" Text="+" FontSize="24"  Clicked="SandRocketTCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandRocketTHatchMinus" Text="-" FontSize="24" Clicked="SandRocketTHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketTHatchMinus" Text="-" FontSize="24" Clicked="SandRocketTHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandRocketTHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"  />
-                            <Button x:Name="sandRocketTHatchPlus" Text="+" FontSize="24" Clicked="SandRocketTHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketTHatchPlus" Text="+" FontSize="24" Clicked="SandRocketTHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
 
                         <!--Mid-->
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandRocketMCargoMinus" Text="-" FontSize="24" Clicked="SandRocketMCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketMCargoMinus" Text="-" FontSize="24" Clicked="SandRocketMCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandRocketMCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                            <Button x:Name="sandRocketMCargoPlus" Text="+" FontSize="24" Clicked="SandRocketMCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketMCargoPlus" Text="+" FontSize="24" Clicked="SandRocketMCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandRocketMHatchMinus" Text="-" FontSize="24" Clicked="SandRocketMHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketMHatchMinus" Text="-" FontSize="24" Clicked="SandRocketMHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandRocketMHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                            <Button x:Name="sandRocketMHatchPlus" Text="+" FontSize="24" Clicked="SandRocketMHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketMHatchPlus" Text="+" FontSize="24" Clicked="SandRocketMHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
 
                         <!--Bottom-->
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandRocketBCargoMinus" Text="-" FontSize="24" Clicked="SandRocketBCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black" />
+                            <Button x:Name="sandRocketBCargoMinus" Text="-" FontSize="24" Clicked="SandRocketBCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandRocketBCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                            <Button x:Name="sandRocketBCargoPlus" Text="+" FontSize="24" Clicked="SandRocketBCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketBCargoPlus" Text="+" FontSize="24" Clicked="SandRocketBCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandRocketBHatchMinus" Text="-" FontSize="24" Clicked="SandRocketBHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketBHatchMinus" Text="-" FontSize="24" Clicked="SandRocketBHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandRocketBHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                            <Button x:Name="sandRocketBHatchPlus" Text="+" FontSize="24" Clicked="SandRocketBHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandRocketBHatchPlus" Text="+" FontSize="24" Clicked="SandRocketBHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
                     </StackLayout>
 
@@ -129,14 +129,14 @@
 
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="SandCargoShipMinus" Text="-" FontSize="24" Clicked="SandCargoShipMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="SandCargoShipMinus" Text="-" FontSize="24" Clicked="SandCargoShipMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="SandCargoShipTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="SandCargoShipPlus" Text="+" FontSize="24" Clicked="SandCargoShipPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="SandCargoShipPlus" Text="+" FontSize="24" Clicked="SandCargoShipPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandShipHatchMinus" Text="-" FontSize="24" Clicked="SandShipHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandShipHatchMinus" Text="-" FontSize="24" Clicked="SandShipHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandShipHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandShipHatchPlus" Text="+" FontSize="24" Clicked="SandShipHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandShipHatchPlus" Text="+" FontSize="24" Clicked="SandShipHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -145,14 +145,14 @@
 
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandFailsCargoMinus" Text="-" FontSize="24" Clicked="SandFailsCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandFailsCargoMinus" Text="-" FontSize="24" Clicked="SandFailsCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandFailsCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandFailsCargoPlus" Text="+" FontSize="24" Clicked="SandFailsCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandFailsCargoPlus" Text="+" FontSize="24" Clicked="SandFailsCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandFailsHatchMinus" Text="-" FontSize="24" Clicked="SandFailsHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandFailsHatchMinus" Text="-" FontSize="24" Clicked="SandFailsHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
                             <Label Text="0" x:Name="sandFailsHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="sandFailsHatchPlus" Text="+" FontSize="24" Clicked="SandFailsHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="sandFailsHatchPlus" Text="+" FontSize="24" Clicked="SandFailsHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
@@ -173,47 +173,47 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" Spacing="100">
-                        <!--Rocket 1 ( Far )-->
+                        <!--Rocket-->
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                             <Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White"/>
                         </StackLayout>
                         <!--Top-->
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleRocketTCargoMinus" Text="-"  FontSize="24" Clicked="TeleRocketTCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketTCargoMinus" Text="-"  FontSize="24" Clicked="TeleRocketTCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleRocketTCargoTotal"  FontSize="24" VerticalTextAlignment="Center" TextColor="White" />
-                            <Button x:Name="teleRocketTCargoPlus" Text="+" FontSize="24" Clicked="TeleRocketTCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketTCargoPlus" Text="+" FontSize="24" Clicked="TeleRocketTCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleRocketTHatchMinus" Text="-" FontSize="24" Clicked="TeleRocketTHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketTHatchMinus" Text="-" FontSize="24" Clicked="TeleRocketTHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleRocketTHatchTotal" FontSize="24" VerticalTextAlignment="Center"  TextColor="White"/>
-                            <Button x:Name="teleRocketTHatchPlus" Text="+" FontSize="24" Clicked="TeleRocketTHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketTHatchPlus" Text="+" FontSize="24" Clicked="TeleRocketTHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
 
                         <!--Mid-->
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleRocketMCargoMinus" Text="-" FontSize="24" Clicked="TeleRocketMCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketMCargoMinus" Text="-" FontSize="24" Clicked="TeleRocketMCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleRocketMCargoTotal" FontSize="24" VerticalTextAlignment="Center"  TextColor="White"/>
-                            <Button x:Name="teleRocketMCargoPlus" Text="+" FontSize="24" Clicked="TeleRocketMCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketMCargoPlus" Text="+" FontSize="24" Clicked="TeleRocketMCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleRocketMHatchMinus" Text="-" FontSize="24" Clicked="TeleRocketMHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketMHatchMinus" Text="-" FontSize="24" Clicked="TeleRocketMHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleRocketMHatchTotal" FontSize="24" VerticalTextAlignment="Center"  TextColor="White"/>
-                            <Button x:Name="teleRocketMHatchPlus" Text="+" FontSize="24" Clicked="TeleRocketMHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketMHatchPlus" Text="+" FontSize="24" Clicked="TeleRocketMHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
 
                         <!--Bottom-->
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleRocketBCargoMinus" Text="-" FontSize="24" Clicked="TeleRocketBCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketBCargoMinus" Text="-" FontSize="24" Clicked="TeleRocketBCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleRocketBCargoTotal" FontSize="24" VerticalTextAlignment="Center"  TextColor="White"/>
-                            <Button x:Name="teleRocketBCargoPlus" Text="+" FontSize="24" Clicked="TeleRocketBCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketBCargoPlus" Text="+" FontSize="24" Clicked="TeleRocketBCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleRocketBHatchMinus" Text="-" FontSize="24" Clicked="TeleRocketBHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketBHatchMinus" Text="-" FontSize="24" Clicked="TeleRocketBHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleRocketBHatchTotal" FontSize="24" VerticalTextAlignment="Center"  TextColor="White"/>
-                            <Button x:Name="teleRocketBHatchPlus" Text="+" FontSize="24" Clicked="TeleRocketBHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleRocketBHatchPlus" Text="+" FontSize="24" Clicked="TeleRocketBHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
                     </StackLayout>
 
@@ -225,14 +225,14 @@
 
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="tele_ShipCargoMinus" Text="-" FontSize="24" Clicked="Tele_ShipCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="tele_ShipCargoMinus" Text="-" FontSize="24" Clicked="Tele_ShipCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleShipCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleShipCargoPlus" Text="+" FontSize="24" Clicked="TeleCargoShipPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleShipCargoPlus" Text="+" FontSize="24" Clicked="TeleCargoShipPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleShipHatchMinus" Text="-" FontSize="24" Clicked="TeleShipHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleShipHatchMinus" Text="-" FontSize="24" Clicked="TeleShipHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleShipHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleShipHatchPlus" Text="+" FontSize="24" Clicked="TeleShipHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleShipHatchPlus" Text="+" FontSize="24" Clicked="TeleShipHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4"/>
                         </StackLayout>
 
                         <!--Fails-->
@@ -242,14 +242,14 @@
 
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleFailsCargoMinus" Text="-" FontSize="24" Clicked="TeleFailsCargoMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleFailsCargoMinus" Text="-" FontSize="24" Clicked="TeleFailsCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleFailsCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleFailsCargoPlus" Text="+" FontSize="24" Clicked="TeleFailsCargoPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleFailsCargoPlus" Text="+" FontSize="24" Clicked="TeleFailsCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
 
                             <Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleFailsHatchMinus" Text="-" FontSize="24" Clicked="TeleFailsHatchMinus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleFailsHatchMinus" Text="-" FontSize="24" Clicked="TeleFailsHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
                             <Label Text="0" x:Name="teleFailsHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-                            <Button x:Name="teleFailsHatchPlus" Text="+" FontSize="24" Clicked="TeleFailsHatchPlus_Clicked" WidthRequest="60" HeightRequest="60" TextColor="Black"/>
+                            <Button x:Name="teleFailsHatchPlus" Text="+" FontSize="24" Clicked="TeleFailsHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
