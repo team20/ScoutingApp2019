@@ -4,7 +4,6 @@ using Xamarin.Forms;
 namespace ScoutingApp2019 {
     public partial class MainPage : TabbedPage {
         private DataHandler data;
-        private Timer sandstormPageTimer;
 
         public MainPage() {
             InitializeComponent();

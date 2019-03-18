@@ -1,5 +1,4 @@
-﻿//using System.Data.SQLite;
-using System.IO;
+﻿using System.IO;
 
 namespace ScoutingApp2019 {
     public class DataHandler {
@@ -40,32 +39,17 @@ namespace ScoutingApp2019 {
         public int AssistedOthers { get; set; }
         public string Comments { get; set; }
 
-        //private readonly SQLiteConnection connection;
-
         private readonly string filePath;
         private readonly string fullDataName;
         private readonly string partialDataPrefix;
 
         private int partialDataNum;
         private string dataString;
-        //private string query;
 
         public DataHandler(string filePath, string fullDataName, string partialDataPrefix) {
             this.filePath = filePath;
             this.fullDataName = fullDataName;
             this.partialDataPrefix = partialDataPrefix;
-
-            //SQLite stuff
-            //if (File.Exists(filePath + fullDataName + ".sqlite"))
-            //    connection = new SQLiteConnection("Data Source = " + filePath + fullDataName + ".sqlite; Version = 3");
-            //else {
-            //    SQLiteConnection.CreateFile(filePath + fullDataName + ".sqlite");
-            //    connection = new SQLiteConnection("Data Source = " + filePath + fullDataName + ".sqlite; Version = 3");
-            //    connection.Open();
-            //    string createStatement = "CREATE TABLE teams(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, number INTEGER NOT NULL UNIQUE, name TEXT NOT NULL);";
-            //    SQLiteCommand command = new SQLiteCommand(createStatement, connection);
-            //    connection.Close();
-            //}
         }
 
         public void BuildString(string separator) {
@@ -124,49 +108,5 @@ namespace ScoutingApp2019 {
             fullDataStreamWriter.Dispose();
             partialDataStreamWriter.Dispose();
         }
-
-        //public void BuildQuery() {
-        //    query = "INSERT INTO raw_data VALUES (" +
-        //        ScoutName + ", " +
-        //        MatchNumber + ", " +
-        //        ReplayMatch + ", " +
-        //        TeamNumber + ", " +
-        //        AllianceColor + ", " +
-        //        StartPosition + ", " +
-        //        PreloadedItem + ", " +
-        //        CrossHabLine + ", " +
-        //        SandCargoShip + ", " +
-        //        SandCargoRocket1 + ", " +
-        //        SandCargoRocket2 + ", " +
-        //        SandCargoRocket3 + ", " +
-        //        SandCargoDrop + ", " +
-        //        SandPanelShip + ", " +
-        //        SandPanelRocket1 + ", " +
-        //        SandPanelRocket2 + ", " +
-        //        SandPanelRocket3 + ", " +
-        //        SandPanelDrop + ", " +
-        //        TeleCargoShip + ", " +
-        //        TeleCargoRocket1 + ", " +
-        //        TeleCargoRocket2 + ", " +
-        //        TeleCargoRocket3 + ", " +
-        //        TeleCargoDrop + ", " +
-        //        TelePanelShip + ", " +
-        //        TelePanelRocket1 + ", " +
-        //        TelePanelRocket2 + ", " +
-        //        TelePanelRocket3 + ", " +
-        //        TelePanelDrop + ", " +
-        //        HabLevelAchieved + ", " +
-        //        HabLevelAttempted + ", " +
-        //        HadAssistance + ", " +
-        //        AssistedOthers + ", " +
-        //        Comments + ");";
-        //}
-
-        //public void WriteToDatabase() {
-        //    connection.Open();
-        //    SQLiteCommand command = new SQLiteCommand(query, connection);
-        //    command.ExecuteNonQueryAsync();
-        //    connection.Close();
-        //}
     }
 }
