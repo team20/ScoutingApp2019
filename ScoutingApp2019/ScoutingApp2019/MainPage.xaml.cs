@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Android.App;
+using Android.Content;
+using System;
 using Xamarin.Forms;
 
 namespace ScoutingApp2019 {
@@ -32,9 +34,9 @@ namespace ScoutingApp2019 {
 			}
 		}
 
-		private void SubmitButton_Clicked(object sender, EventArgs e) {
+		private async void SubmitButton_Clicked(object sender, EventArgs e) {
 			if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1 || HabLevelAttemptedPicker.SelectedIndex == -1 || HabLevelAchievedPicker.SelectedIndex == -1 || NewFilePicker.SelectedIndex == -1)
-				DisplayAlert("Error", "Not all data entries are filled", "OK");
+				await DisplayAlert("Error", "Not all data entries are filled", "OK");
 			else {
 				data.ScoutName = NameEntry.Text;
 				data.MatchNumber = int.Parse(MatchEntry.Text);
@@ -51,11 +53,15 @@ namespace ScoutingApp2019 {
 				data.HabLevelAchieved = HabLevelAchievedPicker.SelectedIndex;
 				data.Comments = CommentsEntry.Text;
 				data.BuildString("\t");
-				//TODO: ***catch "permission not granted" error with an alert***
-				data.WriteToTextFile(NewFilePicker.SelectedIndex == 0);
-				DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
-				ResetAll();
-				CurrentPage = new MainPage();
+				try {
+					data.WriteToTextFile(NewFilePicker.SelectedIndex == 0);
+					await DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
+					ResetAll();
+					CurrentPage = new MainPage();
+				} catch (UnauthorizedAccessException) {
+					if (await DisplayAlert("Error", "App does not have permission to access device storage. To fix this, go to \"Settings > Apps > ScoutingApp2019.Android > Permissions\" and turn on the switch for \"Storage\".", "Settings", "Cancel"))
+						Android.App.Application.Context.StartActivity(new Intent(Android.Provider.Settings.ActionApplicationDetailsSettings, Android.Net.Uri.Parse("package:" + Android.App.Application.Context.PackageName)));
+				}
 			}
 		}
 
