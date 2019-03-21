@@ -1,16 +1,22 @@
-﻿using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using System;
+using System.IO;
 using Xamarin.Forms;
 
 namespace ScoutingApp2019 {
 	public partial class MainPage : TabbedPage {
 		private DataHandler data;
 
+		private string[] teams;
+
 		public MainPage() {
 			InitializeComponent();
 
 			data = new DataHandler("/storage/emulated/0/Download/", "2019_hvr_full_data", "2019_hvr_partial_data_");
+			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_hvr_teams.txt"));
+			teams = streamReader.ReadLine().ToString().Split(',');
+			streamReader.Close();
+			streamReader.Dispose();
 			ResetAll();
 		}
 
@@ -62,6 +68,19 @@ namespace ScoutingApp2019 {
 					if (await DisplayAlert("Error", "App does not have permission to access device storage. To fix this, go to \"Settings > Apps > ScoutingApp2019.Android > Permissions\" and turn on the switch for \"Storage\".", "Settings", "Cancel"))
 						Android.App.Application.Context.StartActivity(new Intent(Android.Provider.Settings.ActionApplicationDetailsSettings, Android.Net.Uri.Parse("package:" + Android.App.Application.Context.PackageName)));
 				}
+			}
+		}
+
+		private void RobotNumEntry_Unfocused(object sender, FocusEventArgs e) {
+			bool valid = false;
+			foreach (string team in teams)
+				if (RobotNumEntry.Text == team || RobotNumEntry.Text == "") {
+					valid = true;
+					break;
+				}
+			if (!valid) {
+				DisplayAlert("Invalid Team Number", "The team number you entered does not match any of the teams at this event", "OK");
+				RobotNumEntry.Focus();
 			}
 		}
 

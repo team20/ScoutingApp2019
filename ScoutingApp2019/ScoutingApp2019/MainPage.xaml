@@ -28,8 +28,8 @@
 					<Switch x:Name="ReplaySwitch"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
-					<Label Text="Robot #" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Entry x:Name="RobotNumEntry" FontSize="24" Keyboard="Numeric" MaxLength="4" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
+					<Label Text="Team #" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+					<Entry x:Name="RobotNumEntry" Unfocused="RobotNumEntry_Unfocused" FontSize="24" Keyboard="Numeric" MaxLength="4" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Label Text="Alliance Color" FontSize="24" VerticalOptions="Center" TextColor="White"/>
