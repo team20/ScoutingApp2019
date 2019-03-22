@@ -34,9 +34,6 @@ namespace ScoutingApp2019 {
 				case 3:
 					BarBackgroundColor = new Color(0.0, 0.0, 0.6);
 					break;
-				default:
-					BarBackgroundColor = new Color(0.0, 0.0, 0.0);
-					break;
 			}
 		}
 
@@ -179,6 +176,7 @@ namespace ScoutingApp2019 {
 			}
 		}
 
+		//button click events
 		private void SandCargoShipPlus_Clicked(object sender, EventArgs e) {
 			if (data.SandCargoShip < 8 && CrossHabLineSwitch.IsToggled)
 				SandCargoShipTotal.Text = (++data.SandCargoShip).ToString();
