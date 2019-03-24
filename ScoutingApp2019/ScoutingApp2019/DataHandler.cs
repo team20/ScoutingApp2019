@@ -93,7 +93,7 @@ namespace ScoutingApp2019 {
 			bool hasNumber = false;
 			for (int i = 0; !hasNumber; i++)
 				if (!File.Exists(filePath + partialDataPrefix + i + ".txt")) {
-					if (newFile)
+					if (newFile || (!newFile && i == 0))
 						partialDataNum = i;
 					else
 						partialDataNum = i - 1;
