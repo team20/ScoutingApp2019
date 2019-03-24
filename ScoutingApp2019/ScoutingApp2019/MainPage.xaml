@@ -11,49 +11,57 @@
 	<!--PAGE 1 START-->
 	<ContentPage Title="Start" Padding="10" TabIndex="0">
 		<ScrollView VerticalScrollBarVisibility="Never">
-			<StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Start">
-				<StackLayout Orientation="Horizontal">
-					<Image Source="/Resources/drawable/logo.png" HorizontalOptions="Center" WidthRequest="200"/>
+			<StackLayout Orientation="Horizontal">
+				<StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Start">
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Name" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+						<Entry x:Name="NameEntry" FontSize="24" Keyboard="Text" WidthRequest="250" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Match #" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+						<Entry x:Name="MatchEntry" FontSize="24" Keyboard="Numeric" MaxLength="3" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Replay Match?" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+						<Switch x:Name="ReplaySwitch"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Team #" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+						<Entry x:Name="RobotNumEntry" Unfocused="RobotNumEntry_Unfocused" FontSize="24" Keyboard="Numeric" MaxLength="4" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Alliance Color" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+						<Picker x:Name="AllianceColorPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+							<Picker.Items>
+								<x:String>Red</x:String>
+								<x:String>Blue</x:String>
+							</Picker.Items>
+						</Picker>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Start Position" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+						<Entry x:Name="StartPositionEntry" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Preloaded Item" FontSize="24" VerticalOptions="Center" TextColor="White"/>
+						<Picker x:Name="PreloadedItemPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+							<Picker.Items>
+								<x:String>None</x:String>
+								<x:String>Hatch Panel</x:String>
+								<x:String>Cargo</x:String>
+							</Picker.Items>
+						</Picker>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Image Source="/Resources/drawable/logo.png" HorizontalOptions="Center" WidthRequest="400"/>
+					</StackLayout>
 				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<Label Text="Name" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Entry x:Name="NameEntry" FontSize="24" Keyboard="Text" WidthRequest="250" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<Label Text="Match #" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Entry x:Name="MatchEntry" FontSize="24" Keyboard="Numeric" MaxLength="3" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<Label Text="Replay Match?" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Switch x:Name="ReplaySwitch"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<Label Text="Team #" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Entry x:Name="RobotNumEntry" Unfocused="RobotNumEntry_Unfocused" FontSize="24" Keyboard="Numeric" MaxLength="4" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<Label Text="Alliance Color" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Picker x:Name="AllianceColorPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
-						<Picker.Items>
-							<x:String>Red</x:String>
-							<x:String>Blue</x:String>
-						</Picker.Items>
-					</Picker>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<Label Text="Start Position" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Entry x:Name="StartPositionEntry" FontSize="24" Keyboard="Numeric" MaxLength="1" WidthRequest="64" VerticalOptions="Center" TextColor="Black" BackgroundColor="White"/>
-					<Image Source="/Resources/drawable/start.png" WidthRequest="200"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<Label Text="Preloaded Item" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Picker x:Name="PreloadedItemPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
-						<Picker.Items>
-							<x:String>None</x:String>
-							<x:String>Hatch Panel</x:String>
-							<x:String>Cargo</x:String>
-						</Picker.Items>
-					</Picker>
+				<StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Start" Spacing="200">
+					<StackLayout Orientation="Horizontal"></StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Image Source="/Resources/drawable/start.png" WidthRequest="150" HeightRequest="200" />
+						<Image Source="/Resources/drawable/start2.png" WidthRequest="150" HeightRequest="200"/>
+					</StackLayout>
 				</StackLayout>
 			</StackLayout>
 		</ScrollView>
@@ -65,8 +73,8 @@
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Vertical">
 				<StackLayout Orientation="Horizontal">
-					<Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White"/>
-					<Switch x:Name="CrossHabLineSwitch" Toggled="CrossHabLineSwitch_Toggled"/>
+					<Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="25"/>
+					<Switch x:Name="CrossHabLineSwitch" Toggled="CrossHabLineSwitch_Toggled" VerticalOptions="Center" Scale="1.5"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Spacing="125">
 					<StackLayout Orientation="Vertical" Spacing="100">
