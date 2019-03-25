@@ -34,9 +34,6 @@ namespace ScoutingApp2019 {
 				case 3:
 					BarBackgroundColor = new Color(0.0, 0.0, 0.6);
 					break;
-				default:
-					BarBackgroundColor = new Color(0.0, 0.0, 0.0);
-					break;
 			}
 		}
 
@@ -94,7 +91,6 @@ namespace ScoutingApp2019 {
 			StartPositionEntry.Text = "";
 			PreloadedItemPicker.SelectedIndex = -1;
 			//page 2
-			CrossHabLineSwitch.IsToggled = false;
 			sandRocketBCargoTotal.Text = "0";
 			sandRocketBHatchTotal.Text = "0";
 			sandRocketMCargoTotal.Text = "0";
@@ -144,6 +140,8 @@ namespace ScoutingApp2019 {
 			data.TelePanelRocket2 = 0;
 			data.TelePanelRocket3 = 0;
 			data.TelePanelDrop = 0;
+			//this is last to prevent the warning from appearing after hitting the submit button
+			CrossHabLineSwitch.IsToggled = false;
 		}
 
 		private async void CrossHabLineSwitch_Toggled(object sender, ToggledEventArgs e) {
@@ -179,6 +177,7 @@ namespace ScoutingApp2019 {
 			}
 		}
 
+		//button click events
 		private void SandCargoShipPlus_Clicked(object sender, EventArgs e) {
 			if (data.SandCargoShip < 8 && CrossHabLineSwitch.IsToggled)
 				SandCargoShipTotal.Text = (++data.SandCargoShip).ToString();
