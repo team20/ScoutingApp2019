@@ -268,57 +268,92 @@
 	<!--PAGE 4 - ENDGAME & SUBMIT-->
 	<ContentPage Title="End Game" Padding="10" TabIndex="3">
 		<ScrollView VerticalScrollBarVisibility="Never">
-			<StackLayout Orientation="Vertical">
-				<StackLayout Orientation="Horizontal" Spacing="125">
-					<StackLayout Orientation="Vertical" Spacing="50">
-						<StackLayout Orientation="Horizontal">
-							<Image Source="Resources/drawable/hab.png" HorizontalOptions="Center" WidthRequest="200" />
+			<StackLayout Orientation="Horizontal" Spacing="50">
+				<StackLayout Orientation="Vertical" Spacing="50">
+					<StackLayout Orientation="Horizontal">
+						<Image Source="Resources/drawable/hab.png" HorizontalOptions="Center" WidthRequest="200"/>
+						<StackLayout Orientation="Vertical">
 							<StackLayout Orientation="Vertical">
-								<StackLayout Orientation="Vertical">
-									<Label Text="Which Hab Level Attempted?" TextColor="White" FontSize="24" VerticalOptions="Center" />
-									<Picker x:Name="HabLevelAttemptedPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
-										<Picker.Items>
-											<x:String>Did Not Climb</x:String>
-											<x:String>Level 1</x:String>
-											<x:String>Level 2</x:String>
-											<x:String>Level 3</x:String>
-										</Picker.Items>
-									</Picker>
-									<Label Text="Which Hab Level Achieved?" TextColor="White" FontSize="24" VerticalOptions="Center" />
-									<Picker x:Name="HabLevelAchievedPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
-										<Picker.Items>
-											<x:String>Did Not Climb</x:String>
-											<x:String>Level 1</x:String>
-											<x:String>Level 2</x:String>
-											<x:String>Level 3</x:String>
-										</Picker.Items>
-									</Picker>
-								</StackLayout>
+								<Label Text="Which Hab Level Attempted?" TextColor="White" FontSize="24" VerticalOptions="Center"/>
+								<Picker x:Name="HabLevelAttemptedPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+									<Picker.Items>
+										<x:String>Did Not Climb</x:String>
+										<x:String>Level 1</x:String>
+										<x:String>Level 2</x:String>
+										<x:String>Level 3</x:String>
+									</Picker.Items>
+								</Picker>
+								<Label Text="Which Hab Level Achieved?" TextColor="White" FontSize="24" VerticalOptions="Center"/>
+								<Picker x:Name="HabLevelAchievedPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+									<Picker.Items>
+										<x:String>Did Not Climb</x:String>
+										<x:String>Level 1</x:String>
+										<x:String>Level 2</x:String>
+										<x:String>Level 3</x:String>
+									</Picker.Items>
+								</Picker>
 							</StackLayout>
 						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<Label Text="Was Helped?" TextColor="White" FontSize="24"/>
-							<Switch x:Name="EndHelped"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Was Helped?" TextColor="White" FontSize="24"/>
+						<Switch x:Name="EndHelped"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Assisted Others?" TextColor="White" FontSize="24"/>
+						<Switch x:Name="EndAssist"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical">
+							<Label Text="Comments (include fouls)" TextColor="White" FontSize="24"/>
+							<Entry x:Name="CommentsEntry" FontSize="24" Keyboard="Text" WidthRequest="500" TextColor="Black" BackgroundColor="White"/>
 						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<Label Text="Assisted Others?" TextColor="White" FontSize="24"/>
-							<Switch x:Name="EndAssist"/>
-						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<StackLayout Orientation="Vertical">
-								<Label Text="Comments (include fouls)" TextColor="White" FontSize="24"/>
-								<Entry x:Name="CommentsEntry" FontSize="24" Keyboard="Text" WidthRequest="500" TextColor="Black" BackgroundColor="White"/>
-							</StackLayout>
-						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<Label Text="Start new file?" VerticalOptions="Center" TextColor="White" FontSize="24"/>
-							<Picker x:Name="NewFilePicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Start new file?" VerticalOptions="Center" TextColor="White" FontSize="24"/>
+						<Picker x:Name="NewFilePicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+							<Picker.Items>
+								<x:String>Yes</x:String>
+								<x:String>No</x:String>
+							</Picker.Items>
+						</Picker>
+						<Button x:Name="SubmitButton" Text="Submit" FontSize="24" Clicked="SubmitButton_Clicked"/>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Vertical" Spacing="25">
+					<StackLayout Orientation="Horizontal" Spacing="25">
+						<StackLayout Orientation="Vertical">
+							<Label Text="How much defense played?" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefenseAmountPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
 								<Picker.Items>
-									<x:String>Yes</x:String>
-									<x:String>No</x:String>
+									<x:String>None</x:String>
+									<x:String>Some</x:String>
+									<x:String>Always</x:String>
 								</Picker.Items>
 							</Picker>
-							<Button x:Name="SubmitButton" Text="Submit" FontSize="24" Clicked="SubmitButton_Clicked"/>
+						</StackLayout>
+						<StackLayout Orientation="Vertical">
+							<Label Text="How good at playing defense?" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefenseSkillPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+								<Picker.Items>
+									<x:String>N/A</x:String>
+									<x:String>Bad</x:String>
+									<x:String>Okay</x:String>
+									<x:String>Good</x:String>
+								</Picker.Items>
+							</Picker>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical">
+							<Label Text="How much defended against?" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefendedPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+								<Picker.Items>
+									<x:String>None</x:String>
+									<x:String>Some</x:String>
+									<x:String>A lot</x:String>
+								</Picker.Items>
+							</Picker>
 						</StackLayout>
 					</StackLayout>
 				</StackLayout>
