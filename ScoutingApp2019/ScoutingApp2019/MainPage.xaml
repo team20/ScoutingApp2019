@@ -323,7 +323,7 @@
 				<StackLayout Orientation="Vertical" Spacing="25">
 					<StackLayout Orientation="Horizontal" Spacing="25">
 						<StackLayout Orientation="Vertical">
-							<Label Text="How much defense played?" TextColor="White" FontSize="24"/>
+							<Label Text="Amount of defense played" TextColor="White" FontSize="24"/>
 							<Picker x:Name="DefenseAmountPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
 								<Picker.Items>
 									<x:String>None</x:String>
@@ -333,25 +333,38 @@
 							</Picker>
 						</StackLayout>
 						<StackLayout Orientation="Vertical">
-							<Label Text="How good at playing defense?" TextColor="White" FontSize="24"/>
+							<Label Text="Effectiveness of defense played" TextColor="White" FontSize="24"/>
 							<Picker x:Name="DefenseSkillPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
 								<Picker.Items>
 									<x:String>N/A</x:String>
 									<x:String>Bad</x:String>
 									<x:String>Okay</x:String>
 									<x:String>Good</x:String>
+									<x:String>Excellent</x:String>
 								</Picker.Items>
 							</Picker>
 						</StackLayout>
 					</StackLayout>
-					<StackLayout Orientation="Horizontal">
+					<StackLayout Orientation="Horizontal" Spacing="25">
 						<StackLayout Orientation="Vertical">
-							<Label Text="How much defended against?" TextColor="White" FontSize="24"/>
-							<Picker x:Name="DefendedPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+							<Label Text="Amount of opposing defense" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefendedAmountPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
 								<Picker.Items>
 									<x:String>None</x:String>
 									<x:String>Some</x:String>
-									<x:String>A lot</x:String>
+									<x:String>Always</x:String>
+								</Picker.Items>
+							</Picker>
+						</StackLayout>
+						<StackLayout Orientation="Vertical">
+							<Label Text="Strength of opposing defense" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefendedSkillPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+								<Picker.Items>
+									<x:String>N/A</x:String>
+									<x:String>Bad</x:String>
+									<x:String>Okay</x:String>
+									<x:String>Good</x:String>
+									<x:String>Excellent</x:String>
 								</Picker.Items>
 							</Picker>
 						</StackLayout>
