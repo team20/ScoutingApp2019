@@ -12,8 +12,8 @@ namespace ScoutingApp2019 {
 		public MainPage() {
 			InitializeComponent();
 
-			data = new DataHandler("/storage/emulated/0/Download/", "2019_hvr_full_data", "2019_hvr_partial_data_");
-			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_hvr_teams.txt"));
+			data = new DataHandler("/storage/emulated/0/Download/", "2019_champs_full_data", "2019_champs_partial_data_");
+			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_champs_curie_teams.txt"));
 			teams = streamReader.ReadLine().ToString().Split(',');
 			streamReader.Close();
 			streamReader.Dispose();
@@ -38,7 +38,19 @@ namespace ScoutingApp2019 {
 		}
 
 		private async void SubmitButton_Clicked(object sender, EventArgs e) {
-			if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1 || HabLevelAttemptedPicker.SelectedIndex == -1 || HabLevelAchievedPicker.SelectedIndex == -1 || NewFilePicker.SelectedIndex == -1)
+			if (NameEntry.Text == "" ||
+				MatchEntry.Text == "" ||
+				RobotNumEntry.Text == "" ||
+				AllianceColorPicker.SelectedIndex == -1 ||
+				StartPositionEntry.Text == "" ||
+				PreloadedItemPicker.SelectedIndex == -1 ||
+				HabLevelAttemptedPicker.SelectedIndex == -1 ||
+				HabLevelAchievedPicker.SelectedIndex == -1 ||
+				NewFilePicker.SelectedIndex == -1 ||
+				DefenseAmountPicker.SelectedIndex == -1 ||
+				DefenseSkillPicker.SelectedIndex == -1 ||
+				DefendedAmountPicker.SelectedIndex == -1 ||
+				DefendedSkillPicker.SelectedIndex == -1)
 				await DisplayAlert("Error", "Not all data entries are filled", "OK");
 			else {
 				data.ScoutName = NameEntry.Text;
@@ -54,6 +66,10 @@ namespace ScoutingApp2019 {
 				data.AssistedOthers = EndAssist.IsToggled ? 1 : 0;
 				data.HabLevelAttempted = HabLevelAttemptedPicker.SelectedIndex;
 				data.HabLevelAchieved = HabLevelAchievedPicker.SelectedIndex;
+				data.DefenseAmount = DefenseAmountPicker.SelectedIndex;
+				data.DefenseSkill = DefenseSkillPicker.SelectedIndex;
+				data.DefendedAmount = DefendedAmountPicker.SelectedIndex;
+				data.DefendedSkill = DefendedSkillPicker.SelectedIndex;
 				data.Comments = CommentsEntry.Text;
 				data.BuildString("\t");
 				try {
@@ -119,6 +135,10 @@ namespace ScoutingApp2019 {
 			EndAssist.IsToggled = false;
 			CommentsEntry.Text = "";
 			NewFilePicker.SelectedIndex = 1;
+			DefenseAmountPicker.SelectedIndex = -1;
+			DefenseSkillPicker.SelectedIndex = -1;
+			DefendedAmountPicker.SelectedIndex = -1;
+			DefendedSkillPicker.SelectedIndex = -1;
 			//data variables
 			data.SandCargoShip = 0;
 			data.SandCargoRocket1 = 0;

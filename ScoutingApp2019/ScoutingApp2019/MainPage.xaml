@@ -73,18 +73,18 @@
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Vertical">
 				<StackLayout Orientation="Horizontal">
-					<Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="25"/>
+					<Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="10"/>
 					<Switch x:Name="CrossHabLineSwitch" Toggled="CrossHabLineSwitch_Toggled" VerticalOptions="Center" Scale="1.5"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Spacing="125">
-					<StackLayout Orientation="Vertical" Spacing="100">
-						<Label Text="" FontSize="48" TextColor="White" ></Label>
-						<Label Text="Top Level" FontSize="24" TextColor="White" ></Label>
-						<Label Text="Middle Level" FontSize="24" TextColor="White" ></Label>
-						<Label Text="Bottom Level" FontSize="24" TextColor="White" ></Label>
+					<StackLayout Orientation="Vertical" Spacing="75">
+						<Label Text="" FontSize="48" TextColor="White"/>
+						<Label Text="Top Level" FontSize="24" TextColor="White"/>
+						<Label Text="Middle Level" FontSize="24" TextColor="White"/>
+						<Label Text="Bottom Level" FontSize="24" TextColor="White"/>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Rocket-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 							<Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White" />
@@ -129,7 +129,7 @@
 						</StackLayout>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Cargo Ship-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
 							<Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center"  TextColor="White"/>
@@ -173,14 +173,14 @@
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Vertical">
 				<StackLayout Orientation="Horizontal" Spacing="125">
-					<StackLayout Orientation="Vertical" Spacing="100">
-						<Label Text="" FontSize="48" TextColor="White"></Label>
-						<Label Text="Top Level" FontSize="24" TextColor="White"></Label>
-						<Label Text="Middle Level" FontSize="24" TextColor="White"></Label>
-						<Label Text="Bottom Level" FontSize="24" TextColor="White"></Label>
+					<StackLayout Orientation="Vertical" Spacing="75">
+						<Label Text="" FontSize="48" TextColor="White"/>
+						<Label Text="Top Level" FontSize="24" TextColor="White"/>
+						<Label Text="Middle Level" FontSize="24" TextColor="White"/>
+						<Label Text="Bottom Level" FontSize="24" TextColor="White"/>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Rocket-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 							<Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White"/>
@@ -225,7 +225,7 @@
 						</StackLayout>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Cargo Ship-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 							<Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center" TextColor="White"/>

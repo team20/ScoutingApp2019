@@ -37,8 +37,12 @@ namespace ScoutingApp2019 {
 		public int HabLevelAttempted { get; set; }
 		public int HadAssistance { get; set; }
 		public int AssistedOthers { get; set; }
+		public int DefenseAmount { get; set; }
+		public int DefenseSkill { get; set; }
+		public int DefendedAmount { get; set; }
+		public int DefendedSkill { get; set; }
 		public string Comments { get; set; }
-
+		
 		private readonly string filePath;
 		private readonly string fullDataName;
 		private readonly string partialDataPrefix;
@@ -86,6 +90,10 @@ namespace ScoutingApp2019 {
 				HabLevelAttempted + separator +
 				HadAssistance + separator +
 				AssistedOthers + separator +
+				DefenseAmount + separator +
+				DefenseSkill + separator +
+				DefendedAmount + separator +
+				DefendedSkill + separator +
 				Comments;
 		}
 
