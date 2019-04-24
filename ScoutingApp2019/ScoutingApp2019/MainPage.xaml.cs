@@ -26,9 +26,11 @@ namespace ScoutingApp2019 {
 					BarBackgroundColor = new Color(0.0, 0.6, 0.0);
 					break;
 				case 1:
+					SandFoulsTotal.Text = data.Fouls.ToString();
 					BarBackgroundColor = new Color(0.5, 0.3, 0.0);
 					break;
 				case 2:
+					TeleFoulsTotal.Text = data.Fouls.ToString();
 					BarBackgroundColor = new Color(0.7, 0.0, 0.0);
 					break;
 				case 3:
@@ -429,6 +431,26 @@ namespace ScoutingApp2019 {
 		private void TeleFailsCargoPlus_Clicked(object sender, EventArgs e) {
 			if (data.TeleCargoDrop < 99)
 				teleFailsCargoTotal.Text = (++data.TeleCargoDrop).ToString();
+		}
+
+		private void SandFoulsMinus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls > 0)
+				SandFoulsTotal.Text = (--data.Fouls).ToString();
+		}
+
+		private void SandFoulsPlus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls < 99)
+				SandFoulsTotal.Text = (++data.Fouls).ToString();
+		}
+
+		private void TeleFoulsMinus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls > 0)
+				TeleFoulsTotal.Text = (--data.Fouls).ToString();
+		}
+
+		private void TeleFoulsPlus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls < 99)
+				TeleFoulsTotal.Text = (++data.Fouls).ToString();
 		}
 	}
 }

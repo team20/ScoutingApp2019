@@ -164,6 +164,16 @@
 						</StackLayout>
 					</StackLayout>
 				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+					<StackLayout Orientation="Vertical">
+						<Label Text="Fouls" FontSize="36" VerticalOptions="Center" TextColor="White"/>
+						<StackLayout Orientation="Horizontal">
+							<Button x:Name="SandFoulsMinus" Text="-" FontSize="24" Clicked="SandFoulsMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Blue" BorderWidth="4"/>
+							<Label Text="0" x:Name="SandFoulsTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
+							<Button x:Name="SandFoulsPlus" Text="+" FontSize="24" Clicked="SandFoulsPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Blue" BorderWidth="4"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
 			</StackLayout>
 		</ScrollView>
 	</ContentPage>
@@ -261,6 +271,16 @@
 						</StackLayout>
 					</StackLayout>
 				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+					<StackLayout Orientation="Vertical">
+						<Label Text="Fouls" FontSize="36" VerticalOptions="Center" TextColor="White"/>
+						<StackLayout Orientation="Horizontal">
+							<Button x:Name="TeleFoulsMinus" Text="-" FontSize="24" Clicked="TeleFoulsMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Blue" BorderWidth="4"/>
+							<Label Text="0" x:Name="TeleFoulsTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
+							<Button x:Name="TeleFoulsPlus" Text="+" FontSize="24" Clicked="TeleFoulsPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Blue" BorderWidth="4"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
 			</StackLayout>
 		</ScrollView>
 	</ContentPage>
@@ -333,7 +353,7 @@
 							</Picker>
 						</StackLayout>
 						<StackLayout Orientation="Vertical">
-							<Label Text="Effectiveness of defense played" TextColor="White" FontSize="24"/>
+							<Label Text="Strength of defense played" TextColor="White" FontSize="24"/>
 							<Picker x:Name="DefenseSkillPicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
 								<Picker.Items>
 									<x:String>N/A</x:String>
