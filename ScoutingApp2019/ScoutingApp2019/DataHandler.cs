@@ -44,6 +44,7 @@ namespace ScoutingApp2019 {
 		public int DefenseSkill { get; set; }
 		public int DefendedAmount { get; set; }
 		public int DefendedSkill { get; set; }
+		public string Breakdown { get; set; }
 		public string Comments { get; set; }
 		
 		private readonly string filePath;
@@ -98,6 +99,7 @@ namespace ScoutingApp2019 {
 				DefendedAmount + separator +
 				DefendedSkill + separator +
 				Fouls + separator +
+				Breakdown + separator +
 				Comments;
 		}
 
