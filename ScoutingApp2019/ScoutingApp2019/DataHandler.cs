@@ -2,6 +2,7 @@
 
 namespace ScoutingApp2019 {
 	public class DataHandler {
+		//START
 		public string ScoutName { get; set; }
 		public int MatchNumber { get; set; }
 		public int ReplayMatch { get; set; }
@@ -21,7 +22,9 @@ namespace ScoutingApp2019 {
 		public int SandPanelRocket2 { get; set; } = 0;
 		public int SandPanelRocket3 { get; set; } = 0;
 		public int SandPanelDrop { get; set; } = 0;
-		//Teleop
+		//SANDSTORM & TELEOP
+		public int Fouls { get; set; } = 0;
+		//TELEOP
 		public int TeleCargoShip { get; set; } = 0;
 		public int TeleCargoRocket1 { get; set; } = 0;
 		public int TeleCargoRocket2 { get; set; } = 0;
@@ -32,13 +35,18 @@ namespace ScoutingApp2019 {
 		public int TelePanelRocket2 { get; set; } = 0;
 		public int TelePanelRocket3 { get; set; } = 0;
 		public int TelePanelDrop { get; set; } = 0;
-		//END
+		//ENDGAME
 		public int HabLevelAchieved { get; set; }
 		public int HabLevelAttempted { get; set; }
 		public int HadAssistance { get; set; }
 		public int AssistedOthers { get; set; }
+		public int DefenseAmount { get; set; }
+		public int DefenseSkill { get; set; }
+		public int DefendedAmount { get; set; }
+		public int DefendedSkill { get; set; }
+		public string Breakdown { get; set; }
 		public string Comments { get; set; }
-
+		
 		private readonly string filePath;
 		private readonly string fullDataName;
 		private readonly string partialDataPrefix;
@@ -86,6 +94,12 @@ namespace ScoutingApp2019 {
 				HabLevelAttempted + separator +
 				HadAssistance + separator +
 				AssistedOthers + separator +
+				DefenseAmount + separator +
+				DefenseSkill + separator +
+				DefendedAmount + separator +
+				DefendedSkill + separator +
+				Fouls + separator +
+				Breakdown + separator +
 				Comments;
 		}
 

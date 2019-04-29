@@ -12,8 +12,8 @@ namespace ScoutingApp2019 {
 		public MainPage() {
 			InitializeComponent();
 
-			data = new DataHandler("/storage/emulated/0/Download/", "2019_hvr_full_data", "2019_hvr_partial_data_");
-			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_hvr_teams.txt"));
+			data = new DataHandler("/storage/emulated/0/Download/", "2019_detroit_curie_full_data", "2019_detroit_curie_partial_data_");
+			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_detroit_curie_teams.txt"));
 			teams = streamReader.ReadLine().ToString().Split(',');
 			streamReader.Close();
 			streamReader.Dispose();
@@ -26,9 +26,11 @@ namespace ScoutingApp2019 {
 					BarBackgroundColor = new Color(0.0, 0.6, 0.0);
 					break;
 				case 1:
+					SandFoulsTotal.Text = data.Fouls.ToString();
 					BarBackgroundColor = new Color(0.5, 0.3, 0.0);
 					break;
 				case 2:
+					TeleFoulsTotal.Text = data.Fouls.ToString();
 					BarBackgroundColor = new Color(0.7, 0.0, 0.0);
 					break;
 				case 3:
@@ -38,7 +40,20 @@ namespace ScoutingApp2019 {
 		}
 
 		private async void SubmitButton_Clicked(object sender, EventArgs e) {
-			if (NameEntry.Text == "" || MatchEntry.Text == "" || RobotNumEntry.Text == "" || AllianceColorPicker.SelectedIndex == -1 || StartPositionEntry.Text == "" || PreloadedItemPicker.SelectedIndex == -1 || HabLevelAttemptedPicker.SelectedIndex == -1 || HabLevelAchievedPicker.SelectedIndex == -1 || NewFilePicker.SelectedIndex == -1)
+			if (NameEntry.Text == "" ||
+				MatchEntry.Text == "" ||
+				RobotNumEntry.Text == "" ||
+				AllianceColorPicker.SelectedIndex == -1 ||
+				StartPositionEntry.Text == "" ||
+				PreloadedItemPicker.SelectedIndex == -1 ||
+				HabLevelAttemptedPicker.SelectedIndex == -1 ||
+				HabLevelAchievedPicker.SelectedIndex == -1 ||
+				NewFilePicker.SelectedIndex == -1 ||
+				DefenseAmountPicker.SelectedIndex == -1 ||
+				DefenseSkillPicker.SelectedIndex == -1 ||
+				DefendedAmountPicker.SelectedIndex == -1 ||
+				DefendedSkillPicker.SelectedIndex == -1 ||
+				BreakdownPicker.SelectedIndex == -1)
 				await DisplayAlert("Error", "Not all data entries are filled", "OK");
 			else {
 				data.ScoutName = NameEntry.Text;
@@ -54,6 +69,11 @@ namespace ScoutingApp2019 {
 				data.AssistedOthers = EndAssist.IsToggled ? 1 : 0;
 				data.HabLevelAttempted = HabLevelAttemptedPicker.SelectedIndex;
 				data.HabLevelAchieved = HabLevelAchievedPicker.SelectedIndex;
+				data.DefenseAmount = DefenseAmountPicker.SelectedIndex;
+				data.DefenseSkill = DefenseSkillPicker.SelectedIndex;
+				data.DefendedAmount = DefendedAmountPicker.SelectedIndex;
+				data.DefendedSkill = DefendedSkillPicker.SelectedIndex;
+				data.Breakdown = BreakdownPicker.SelectedItem.ToString();
 				data.Comments = CommentsEntry.Text;
 				data.BuildString("\t");
 				try {
@@ -101,6 +121,7 @@ namespace ScoutingApp2019 {
 			sandShipHatchTotal.Text = "0";
 			sandFailsCargoTotal.Text = "0";
 			sandFailsHatchTotal.Text = "0";
+			SandFoulsTotal.Text = "0";
 			//page 3
 			teleRocketBCargoTotal.Text = "0";
 			teleRocketBHatchTotal.Text = "0";
@@ -112,6 +133,7 @@ namespace ScoutingApp2019 {
 			teleShipHatchTotal.Text = "0";
 			teleFailsCargoTotal.Text = "0";
 			teleFailsHatchTotal.Text = "0";
+			TeleFoulsTotal.Text = "0";
 			//page 4
 			HabLevelAttemptedPicker.SelectedIndex = -1;
 			HabLevelAchievedPicker.SelectedIndex = -1;
@@ -119,6 +141,11 @@ namespace ScoutingApp2019 {
 			EndAssist.IsToggled = false;
 			CommentsEntry.Text = "";
 			NewFilePicker.SelectedIndex = 1;
+			DefenseAmountPicker.SelectedIndex = -1;
+			DefenseSkillPicker.SelectedIndex = -1;
+			DefendedAmountPicker.SelectedIndex = -1;
+			DefendedSkillPicker.SelectedIndex = -1;
+			BreakdownPicker.SelectedIndex = 0;
 			//data variables
 			data.SandCargoShip = 0;
 			data.SandCargoRocket1 = 0;
@@ -140,6 +167,8 @@ namespace ScoutingApp2019 {
 			data.TelePanelRocket2 = 0;
 			data.TelePanelRocket3 = 0;
 			data.TelePanelDrop = 0;
+			data.Breakdown = "";
+			data.Fouls = 0;
 			//this is last to prevent the warning from appearing after hitting the submit button
 			CrossHabLineSwitch.IsToggled = false;
 		}
@@ -409,6 +438,108 @@ namespace ScoutingApp2019 {
 		private void TeleFailsCargoPlus_Clicked(object sender, EventArgs e) {
 			if (data.TeleCargoDrop < 99)
 				teleFailsCargoTotal.Text = (++data.TeleCargoDrop).ToString();
+		}
+
+		private void SandFoulsMinus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls > 0)
+				SandFoulsTotal.Text = (--data.Fouls).ToString();
+		}
+
+		private void SandFoulsPlus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls < 99)
+				SandFoulsTotal.Text = (++data.Fouls).ToString();
+		}
+
+		private void TeleFoulsMinus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls > 0)
+				TeleFoulsTotal.Text = (--data.Fouls).ToString();
+		}
+
+		private void TeleFoulsPlus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls < 99)
+				TeleFoulsTotal.Text = (++data.Fouls).ToString();
+		}
+
+		private void HabLevelAttemptedPicker_Unfocused(object sender, FocusEventArgs e) {
+			if (HabLevelAttemptedPicker.SelectedIndex < HabLevelAchievedPicker.SelectedIndex)
+				HabLevelAchievedPicker.SelectedIndex = HabLevelAttemptedPicker.SelectedIndex;
+		}
+
+		private void HabLevelAchievedPicker_Unfocused(object sender, FocusEventArgs e) {
+			if (HabLevelAttemptedPicker.SelectedIndex < HabLevelAchievedPicker.SelectedIndex)
+				HabLevelAttemptedPicker.SelectedIndex = HabLevelAchievedPicker.SelectedIndex;
+		}
+
+		private async void DefenseAmountPicker_Unfocused(object sender, FocusEventArgs e) {
+			if (DefenseAmountPicker.SelectedIndex == 0 && DefenseSkillPicker.SelectedIndex != 0) {
+				if (DefenseSkillPicker.SelectedIndex == -1)
+					DefenseSkillPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If no defense is played, strength cannot be measured", "OK");
+					DefenseAmountPicker.Focus();
+				}
+			} else if (DefenseAmountPicker.SelectedIndex != 0 && DefenseSkillPicker.SelectedIndex == 0) {
+				if (DefenseAmountPicker.SelectedIndex == -1)
+					DefenseAmountPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If defense is played, its strength must be specified", "OK");
+					DefenseSkillPicker.Focus();
+				}
+			}
+		}
+
+		private async void DefenseSkillPicker_Unfocused(object sender, FocusEventArgs e) {
+			if (DefenseAmountPicker.SelectedIndex == 0 && DefenseSkillPicker.SelectedIndex != 0) {
+				if (DefenseSkillPicker.SelectedIndex == -1)
+					DefenseSkillPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If no defense is played, strength cannot be measured", "OK");
+					DefenseAmountPicker.Focus();
+				}
+			} else if (DefenseAmountPicker.SelectedIndex != 0 && DefenseSkillPicker.SelectedIndex == 0) {
+				if (DefenseAmountPicker.SelectedIndex == -1)
+					DefenseAmountPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If defense is played, its strength must be specified", "OK");
+					DefenseSkillPicker.Focus();
+				}
+			}
+		}
+
+		private async void DefendedAmountPicker_Unfocused(object sender, FocusEventArgs e) {
+			if (DefendedAmountPicker.SelectedIndex == 0 && DefendedSkillPicker.SelectedIndex != 0) {
+				if (DefendedSkillPicker.SelectedIndex == -1)
+					DefendedSkillPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If no defense is played, strength cannot be measured", "OK");
+					DefendedAmountPicker.Focus();
+				}
+			} else if (DefendedAmountPicker.SelectedIndex != 0 && DefendedSkillPicker.SelectedIndex == 0) {
+				if (DefendedAmountPicker.SelectedIndex == -1)
+					DefendedAmountPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If defense is played, its strength must be specified", "OK");
+					DefendedSkillPicker.Focus();
+				}
+			}
+		}
+
+		private async void DefendedSkillPicker_Unfocused(object sender, FocusEventArgs e) {
+			if (DefendedAmountPicker.SelectedIndex == 0 && DefendedSkillPicker.SelectedIndex != 0) {
+				if (DefendedSkillPicker.SelectedIndex == -1)
+					DefendedSkillPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If no defense is played, strength cannot be measured", "OK");
+					DefendedAmountPicker.Focus();
+				}
+			} else if (DefendedAmountPicker.SelectedIndex != 0 && DefendedSkillPicker.SelectedIndex == 0) {
+				if (DefendedAmountPicker.SelectedIndex == -1)
+					DefendedAmountPicker.SelectedIndex = 0;
+				else {
+					await DisplayAlert("Error", "If defense is played, its strength must be specified", "OK");
+					DefendedSkillPicker.Focus();
+				}
+			}
 		}
 	}
 }

@@ -73,18 +73,18 @@
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Vertical">
 				<StackLayout Orientation="Horizontal">
-					<Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="25"/>
+					<Label Text="Crossed Hab Line?" FontSize="24" VerticalOptions="Center" TextColor="White" Margin="10"/>
 					<Switch x:Name="CrossHabLineSwitch" Toggled="CrossHabLineSwitch_Toggled" VerticalOptions="Center" Scale="1.5"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Spacing="125">
-					<StackLayout Orientation="Vertical" Spacing="100">
-						<Label Text="" FontSize="48" TextColor="White" ></Label>
-						<Label Text="Top Level" FontSize="24" TextColor="White" ></Label>
-						<Label Text="Middle Level" FontSize="24" TextColor="White" ></Label>
-						<Label Text="Bottom Level" FontSize="24" TextColor="White" ></Label>
+					<StackLayout Orientation="Vertical" Spacing="75">
+						<Label Text="" FontSize="48" TextColor="White"/>
+						<Label Text="Top Level" FontSize="24" TextColor="White"/>
+						<Label Text="Middle Level" FontSize="24" TextColor="White"/>
+						<Label Text="Bottom Level" FontSize="24" TextColor="White"/>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Rocket-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 							<Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White" />
@@ -129,7 +129,7 @@
 						</StackLayout>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Cargo Ship-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
 							<Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center"  TextColor="White"/>
@@ -153,14 +153,24 @@
 
 						<StackLayout Orientation="Horizontal">
 							<Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="sandFailsCargoMinus" Text="-" FontSize="24" Clicked="SandFailsCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="sandFailsCargoMinus" Text="-" FontSize="24" Clicked="SandFailsCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
 							<Label Text="0" x:Name="sandFailsCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="sandFailsCargoPlus" Text="+" FontSize="24" Clicked="SandFailsCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="sandFailsCargoPlus" Text="+" FontSize="24" Clicked="SandFailsCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
 
 							<Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="sandFailsHatchMinus" Text="-" FontSize="24" Clicked="SandFailsHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="sandFailsHatchMinus" Text="-" FontSize="24" Clicked="SandFailsHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
 							<Label Text="0" x:Name="sandFailsHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="sandFailsHatchPlus" Text="+" FontSize="24" Clicked="SandFailsHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="sandFailsHatchPlus" Text="+" FontSize="24" Clicked="SandFailsHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+					<StackLayout Orientation="Vertical">
+						<Label Text="Fouls" FontSize="36" VerticalOptions="Center" TextColor="White"/>
+						<StackLayout Orientation="Horizontal">
+							<Button x:Name="SandFoulsMinus" Text="-" FontSize="24" Clicked="SandFoulsMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Label Text="0" x:Name="SandFoulsTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
+							<Button x:Name="SandFoulsPlus" Text="+" FontSize="24" Clicked="SandFoulsPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
 						</StackLayout>
 					</StackLayout>
 				</StackLayout>
@@ -173,14 +183,14 @@
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Vertical">
 				<StackLayout Orientation="Horizontal" Spacing="125">
-					<StackLayout Orientation="Vertical" Spacing="100">
-						<Label Text="" FontSize="48" TextColor="White"></Label>
-						<Label Text="Top Level" FontSize="24" TextColor="White"></Label>
-						<Label Text="Middle Level" FontSize="24" TextColor="White"></Label>
-						<Label Text="Bottom Level" FontSize="24" TextColor="White"></Label>
+					<StackLayout Orientation="Vertical" Spacing="75">
+						<Label Text="" FontSize="48" TextColor="White"/>
+						<Label Text="Top Level" FontSize="24" TextColor="White"/>
+						<Label Text="Middle Level" FontSize="24" TextColor="White"/>
+						<Label Text="Bottom Level" FontSize="24" TextColor="White"/>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Rocket-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 							<Label Text="Rocket" FontSize="36" VerticalTextAlignment="Center" TextColor="White"/>
@@ -225,7 +235,7 @@
 						</StackLayout>
 					</StackLayout>
 
-					<StackLayout Orientation="Vertical" Spacing="100">
+					<StackLayout Orientation="Vertical" Spacing="75">
 						<!--Cargo Ship-->
 						<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 							<Label Text="Cargo Ship" FontSize="36" VerticalTextAlignment="Center" TextColor="White"/>
@@ -250,14 +260,24 @@
 
 						<StackLayout Orientation="Horizontal">
 							<Label Text="Cargo" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="teleFailsCargoMinus" Text="-" FontSize="24" Clicked="TeleFailsCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="teleFailsCargoMinus" Text="-" FontSize="24" Clicked="TeleFailsCargoMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
 							<Label Text="0" x:Name="teleFailsCargoTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="teleFailsCargoPlus" Text="+" FontSize="24" Clicked="TeleFailsCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="teleFailsCargoPlus" Text="+" FontSize="24" Clicked="TeleFailsCargoPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Orange" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
 
 							<Label Text="Hatch" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="teleFailsHatchMinus" Text="-" FontSize="24" Clicked="TeleFailsHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="teleFailsHatchMinus" Text="-" FontSize="24" Clicked="TeleFailsHatchMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
 							<Label Text="0" x:Name="teleFailsHatchTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
-							<Button x:Name="teleFailsHatchPlus" Text="+" FontSize="24" Clicked="TeleFailsHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Button x:Name="teleFailsHatchPlus" Text="+" FontSize="24" Clicked="TeleFailsHatchPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Yellow" BorderWidth="4" BackgroundColor="PaleVioletRed"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+					<StackLayout Orientation="Vertical">
+						<Label Text="Fouls" FontSize="36" VerticalOptions="Center" TextColor="White"/>
+						<StackLayout Orientation="Horizontal">
+							<Button x:Name="TeleFoulsMinus" Text="-" FontSize="24" Clicked="TeleFoulsMinus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
+							<Label Text="0" x:Name="TeleFoulsTotal" FontSize="24" VerticalTextAlignment="Center" TextColor="White"/>
+							<Button x:Name="TeleFoulsPlus" Text="+" FontSize="24" Clicked="TeleFoulsPlus_Clicked" WidthRequest="50" HeightRequest="50" TextColor="Black" BorderColor="Red" BorderWidth="4"/>
 						</StackLayout>
 					</StackLayout>
 				</StackLayout>
@@ -268,58 +288,120 @@
 	<!--PAGE 4 - ENDGAME & SUBMIT-->
 	<ContentPage Title="End Game" Padding="10" TabIndex="3">
 		<ScrollView VerticalScrollBarVisibility="Never">
-			<StackLayout Orientation="Vertical">
-				<StackLayout Orientation="Horizontal" Spacing="125">
-					<StackLayout Orientation="Vertical" Spacing="50">
-						<StackLayout Orientation="Horizontal">
-							<Image Source="Resources/drawable/hab.png" HorizontalOptions="Center" WidthRequest="200" />
+			<StackLayout Orientation="Horizontal" Spacing="50">
+				<StackLayout Orientation="Vertical" Spacing="50">
+					<StackLayout Orientation="Horizontal">
+						<Image Source="Resources/drawable/hab.png" HorizontalOptions="Center" WidthRequest="200"/>
+						<StackLayout Orientation="Vertical">
 							<StackLayout Orientation="Vertical">
-								<StackLayout Orientation="Vertical">
-									<Label Text="Which Hab Level Attempted?" TextColor="White" FontSize="24" VerticalOptions="Center" />
-									<Picker x:Name="HabLevelAttemptedPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
-										<Picker.Items>
-											<x:String>Did Not Climb</x:String>
-											<x:String>Level 1</x:String>
-											<x:String>Level 2</x:String>
-											<x:String>Level 3</x:String>
-										</Picker.Items>
-									</Picker>
-									<Label Text="Which Hab Level Achieved?" TextColor="White" FontSize="24" VerticalOptions="Center" />
-									<Picker x:Name="HabLevelAchievedPicker" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
-										<Picker.Items>
-											<x:String>Did Not Climb</x:String>
-											<x:String>Level 1</x:String>
-											<x:String>Level 2</x:String>
-											<x:String>Level 3</x:String>
-										</Picker.Items>
-									</Picker>
-								</StackLayout>
+								<Label Text="Which Hab Level Attempted?" TextColor="White" FontSize="24" VerticalOptions="Center"/>
+								<Picker x:Name="HabLevelAttemptedPicker" Unfocused="HabLevelAttemptedPicker_Unfocused" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+									<Picker.Items>
+										<x:String>Did Not Climb</x:String>
+										<x:String>Level 1</x:String>
+										<x:String>Level 2</x:String>
+										<x:String>Level 3</x:String>
+									</Picker.Items>
+								</Picker>
+								<Label Text="Which Hab Level Achieved?" TextColor="White" FontSize="24" VerticalOptions="Center"/>
+								<Picker x:Name="HabLevelAchievedPicker" Unfocused="HabLevelAchievedPicker_Unfocused" WidthRequest="150" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+									<Picker.Items>
+										<x:String>Did Not Climb</x:String>
+										<x:String>Level 1</x:String>
+										<x:String>Level 2</x:String>
+										<x:String>Level 3</x:String>
+									</Picker.Items>
+								</Picker>
 							</StackLayout>
 						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<Label Text="Was Helped?" TextColor="White" FontSize="24"/>
-							<Switch x:Name="EndHelped"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Was Helped?" TextColor="White" FontSize="24"/>
+						<Switch x:Name="EndHelped"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Assisted Others?" TextColor="White" FontSize="24"/>
+						<Switch x:Name="EndAssist"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<StackLayout Orientation="Vertical">
+							<Label Text="Comments (include fouls)" TextColor="White" FontSize="24"/>
+							<Entry x:Name="CommentsEntry" FontSize="24" Keyboard="Text" WidthRequest="500" TextColor="Black" BackgroundColor="White"/>
 						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<Label Text="Assisted Others?" TextColor="White" FontSize="24"/>
-							<Switch x:Name="EndAssist"/>
-						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<StackLayout Orientation="Vertical">
-								<Label Text="Comments (include fouls)" TextColor="White" FontSize="24"/>
-								<Entry x:Name="CommentsEntry" FontSize="24" Keyboard="Text" WidthRequest="500" TextColor="Black" BackgroundColor="White"/>
-							</StackLayout>
-						</StackLayout>
-						<StackLayout Orientation="Horizontal">
-							<Label Text="Start new file?" VerticalOptions="Center" TextColor="White" FontSize="24"/>
-							<Picker x:Name="NewFilePicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Start new file?" VerticalOptions="Center" TextColor="White" FontSize="24"/>
+						<Picker x:Name="NewFilePicker" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+							<Picker.Items>
+								<x:String>Yes</x:String>
+								<x:String>No</x:String>
+							</Picker.Items>
+						</Picker>
+						<Button x:Name="SubmitButton" Text="Submit" FontSize="24" Clicked="SubmitButton_Clicked"/>
+					</StackLayout>
+				</StackLayout>
+				<StackLayout Orientation="Vertical" Spacing="25">
+					<StackLayout Orientation="Horizontal" Spacing="25">
+						<StackLayout Orientation="Vertical">
+							<Label Text="Amount of defense played" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefenseAmountPicker" Unfocused="DefenseAmountPicker_Unfocused" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
 								<Picker.Items>
-									<x:String>Yes</x:String>
-									<x:String>No</x:String>
+									<x:String>None</x:String>
+									<x:String>Some</x:String>
+									<x:String>A lot</x:String>
 								</Picker.Items>
 							</Picker>
-							<Button x:Name="SubmitButton" Text="Submit" FontSize="24" Clicked="SubmitButton_Clicked"/>
 						</StackLayout>
+						<StackLayout Orientation="Vertical">
+							<Label Text="Strength of defense played" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefenseSkillPicker" Unfocused="DefenseSkillPicker_Unfocused" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+								<Picker.Items>
+									<x:String>N/A</x:String>
+									<x:String>Bad</x:String>
+									<x:String>Okay</x:String>
+									<x:String>Good</x:String>
+									<x:String>Excellent</x:String>
+								</Picker.Items>
+							</Picker>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" Spacing="25">
+						<StackLayout Orientation="Vertical">
+							<Label Text="Amount of opposing defense" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefendedAmountPicker" Unfocused="DefendedAmountPicker_Unfocused" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+								<Picker.Items>
+									<x:String>None</x:String>
+									<x:String>Some</x:String>
+									<x:String>A lot</x:String>
+								</Picker.Items>
+							</Picker>
+						</StackLayout>
+						<StackLayout Orientation="Vertical">
+							<Label Text="Strength of opposing defense" TextColor="White" FontSize="24"/>
+							<Picker x:Name="DefendedSkillPicker" Unfocused="DefendedSkillPicker_Unfocused" WidthRequest="100" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+								<Picker.Items>
+									<x:String>N/A</x:String>
+									<x:String>Bad</x:String>
+									<x:String>Okay</x:String>
+									<x:String>Good</x:String>
+									<x:String>Excellent</x:String>
+								</Picker.Items>
+							</Picker>
+						</StackLayout>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal">
+						<Label Text="Bricked or Disabled?" TextColor="White" FontSize="24"/>
+						<Picker x:Name="BreakdownPicker" WidthRequest="400" VerticalOptions="Center" FontSize="24" TextColor="Black" BackgroundColor="White">
+							<Picker.Items>
+								<x:String>N/A</x:String>
+								<x:String>Fell over and not righted</x:String>
+								<x:String>Disconnected from field</x:String>
+								<x:String>Massive mechanical failure</x:String>
+								<x:String>Battery fell out/robot turned off</x:String>
+								<x:String>Disabled for safety violation</x:String>
+								<x:String>Bumpers fell off</x:String>
+							</Picker.Items>
+						</Picker>
 					</StackLayout>
 				</StackLayout>
 			</StackLayout>
