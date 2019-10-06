@@ -5,16 +5,17 @@ using Xamarin.Forms;
 
 namespace ScoutingApp2019 {
 	public partial class MainPage : TabbedPage {
-		private DataHandler data;
+		private readonly DataHandler data;
 
-		private string[] teams;
+		private readonly string[] teams;
 
+		#region Main
 		public MainPage() {
 			InitializeComponent();
 
-			data = new DataHandler("/storage/emulated/0/Download/", "2019_detroit_curie_full_data", "2019_detroit_curie_partial_data_");
+			data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2019_test", "2019_test_", "2019_test");
 			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_detroit_curie_teams.txt"));
-			teams = streamReader.ReadLine().ToString().Split(',');
+			teams = streamReader.ReadLine().Split(',');
 			streamReader.Close();
 			streamReader.Dispose();
 			ResetAll();
@@ -36,68 +37,6 @@ namespace ScoutingApp2019 {
 				case 3:
 					BarBackgroundColor = new Color(0.0, 0.0, 0.6);
 					break;
-			}
-		}
-
-		private async void SubmitButton_Clicked(object sender, EventArgs e) {
-			if (NameEntry.Text == "" ||
-				MatchEntry.Text == "" ||
-				RobotNumEntry.Text == "" ||
-				AllianceColorPicker.SelectedIndex == -1 ||
-				StartPositionEntry.Text == "" ||
-				PreloadedItemPicker.SelectedIndex == -1 ||
-				HabLevelAttemptedPicker.SelectedIndex == -1 ||
-				HabLevelAchievedPicker.SelectedIndex == -1 ||
-				NewFilePicker.SelectedIndex == -1 ||
-				DefenseAmountPicker.SelectedIndex == -1 ||
-				DefenseSkillPicker.SelectedIndex == -1 ||
-				DefendedAmountPicker.SelectedIndex == -1 ||
-				DefendedSkillPicker.SelectedIndex == -1 ||
-				BreakdownPicker.SelectedIndex == -1)
-				await DisplayAlert("Error", "Not all data entries are filled", "OK");
-			else {
-				data.ScoutName = NameEntry.Text;
-				data.MatchNumber = int.Parse(MatchEntry.Text);
-				data.ReplayMatch = ReplaySwitch.IsToggled ? 1 : 0;
-				data.TeamNumber = int.Parse(RobotNumEntry.Text);
-				data.AllianceColor = (string)AllianceColorPicker.SelectedItem;
-				data.StartPosition = int.Parse(StartPositionEntry.Text);
-				data.PreloadedItem = PreloadedItemPicker.SelectedIndex;
-				data.CrossHabLine = CrossHabLineSwitch.IsToggled ? 1 : 0;
-				data.HabLevelAchieved = HabLevelAttemptedPicker.SelectedIndex;
-				data.HadAssistance = EndHelped.IsToggled ? 1 : 0;
-				data.AssistedOthers = EndAssist.IsToggled ? 1 : 0;
-				data.HabLevelAttempted = HabLevelAttemptedPicker.SelectedIndex;
-				data.HabLevelAchieved = HabLevelAchievedPicker.SelectedIndex;
-				data.DefenseAmount = DefenseAmountPicker.SelectedIndex;
-				data.DefenseSkill = DefenseSkillPicker.SelectedIndex;
-				data.DefendedAmount = DefendedAmountPicker.SelectedIndex;
-				data.DefendedSkill = DefendedSkillPicker.SelectedIndex;
-				data.Breakdown = BreakdownPicker.SelectedItem.ToString();
-				data.Comments = CommentsEntry.Text;
-				data.BuildString("\t");
-				try {
-					data.WriteToTextFile(NewFilePicker.SelectedIndex == 0);
-					await DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
-					ResetAll();
-					CurrentPage = new MainPage();
-				} catch (UnauthorizedAccessException) {
-					if (await DisplayAlert("Error", "App does not have permission to access device storage. To fix this, go to \"Settings > Apps > ScoutingApp2019.Android > Permissions\" and turn on the switch for \"Storage\".", "Settings", "Cancel"))
-						Android.App.Application.Context.StartActivity(new Intent(Android.Provider.Settings.ActionApplicationDetailsSettings, Android.Net.Uri.Parse("package:" + Android.App.Application.Context.PackageName)));
-				}
-			}
-		}
-
-		private void RobotNumEntry_Unfocused(object sender, FocusEventArgs e) {
-			bool valid = false;
-			foreach (string team in teams)
-				if (RobotNumEntry.Text == team || RobotNumEntry.Text == "") {
-					valid = true;
-					break;
-				}
-			if (!valid) {
-				DisplayAlert("Invalid Team Number", "The team number you entered does not match any of the teams at this event", "OK");
-				RobotNumEntry.Focus();
 			}
 		}
 
@@ -172,7 +111,24 @@ namespace ScoutingApp2019 {
 			//this is last to prevent the warning from appearing after hitting the submit button
 			CrossHabLineSwitch.IsToggled = false;
 		}
+		#endregion
 
+		#region Start
+		private void RobotNumEntry_Unfocused(object sender, FocusEventArgs e) {     //TODO: change this to use SQLite DB instead of text file
+			bool valid = false;
+			foreach (string team in teams)
+				if (RobotNumEntry.Text == team || RobotNumEntry.Text == "") {
+					valid = true;
+					break;
+				}
+			if (!valid) {
+				DisplayAlert("Invalid Team Number", "The team number you entered does not match any of the teams at this event", "OK");
+				RobotNumEntry.Focus();
+			}
+		}
+		#endregion
+
+		#region Sandstorm
 		private async void CrossHabLineSwitch_Toggled(object sender, ToggledEventArgs e) {
 			if (!CrossHabLineSwitch.IsToggled) {
 				if (data.SandCargoShip > 0 ||
@@ -206,7 +162,6 @@ namespace ScoutingApp2019 {
 			}
 		}
 
-		//button click events
 		private void SandCargoShipPlus_Clicked(object sender, EventArgs e) {
 			if (data.SandCargoShip < 8 && CrossHabLineSwitch.IsToggled)
 				SandCargoShipTotal.Text = (++data.SandCargoShip).ToString();
@@ -339,7 +294,18 @@ namespace ScoutingApp2019 {
 				sandFailsCargoTotal.Text = (++data.SandCargoDrop).ToString();
 		}
 
-		//TELEOP
+		private void SandFoulsMinus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls > 0)
+				SandFoulsTotal.Text = (--data.Fouls).ToString();
+		}
+
+		private void SandFoulsPlus_Clicked(object sender, EventArgs e) {
+			if (data.Fouls < 99)
+				SandFoulsTotal.Text = (++data.Fouls).ToString();
+		}
+		#endregion
+
+		#region Teleop
 		private void TeleCargoShipPlus_Clicked(object sender, EventArgs e) {
 			if (data.TeleCargoShip < 8)
 				teleShipCargoTotal.Text = (++data.TeleCargoShip).ToString();
@@ -440,16 +406,6 @@ namespace ScoutingApp2019 {
 				teleFailsCargoTotal.Text = (++data.TeleCargoDrop).ToString();
 		}
 
-		private void SandFoulsMinus_Clicked(object sender, EventArgs e) {
-			if (data.Fouls > 0)
-				SandFoulsTotal.Text = (--data.Fouls).ToString();
-		}
-
-		private void SandFoulsPlus_Clicked(object sender, EventArgs e) {
-			if (data.Fouls < 99)
-				SandFoulsTotal.Text = (++data.Fouls).ToString();
-		}
-
 		private void TeleFoulsMinus_Clicked(object sender, EventArgs e) {
 			if (data.Fouls > 0)
 				TeleFoulsTotal.Text = (--data.Fouls).ToString();
@@ -459,7 +415,9 @@ namespace ScoutingApp2019 {
 			if (data.Fouls < 99)
 				TeleFoulsTotal.Text = (++data.Fouls).ToString();
 		}
+		#endregion
 
+		#region Endgame
 		private void HabLevelAttemptedPicker_Unfocused(object sender, FocusEventArgs e) {
 			if (HabLevelAttemptedPicker.SelectedIndex < HabLevelAchievedPicker.SelectedIndex)
 				HabLevelAchievedPicker.SelectedIndex = HabLevelAttemptedPicker.SelectedIndex;
@@ -541,5 +499,57 @@ namespace ScoutingApp2019 {
 				}
 			}
 		}
+
+		private async void SubmitButton_Clicked(object sender, EventArgs e) {
+			if (NameEntry.Text == "" ||
+				MatchEntry.Text == "" ||
+				RobotNumEntry.Text == "" ||
+				AllianceColorPicker.SelectedIndex == -1 ||
+				StartPositionEntry.Text == "" ||
+				PreloadedItemPicker.SelectedIndex == -1 ||
+				HabLevelAttemptedPicker.SelectedIndex == -1 ||
+				HabLevelAchievedPicker.SelectedIndex == -1 ||
+				NewFilePicker.SelectedIndex == -1 ||
+				DefenseAmountPicker.SelectedIndex == -1 ||
+				DefenseSkillPicker.SelectedIndex == -1 ||
+				DefendedAmountPicker.SelectedIndex == -1 ||
+				DefendedSkillPicker.SelectedIndex == -1 ||
+				BreakdownPicker.SelectedIndex == -1)
+				await DisplayAlert("Error", "Not all data entries are filled", "OK");
+			else {
+				data.ScoutName = NameEntry.Text;
+				data.MatchNumber = int.Parse(MatchEntry.Text);
+				data.ReplayMatch = ReplaySwitch.IsToggled ? 1 : 0;
+				data.TeamNumber = int.Parse(RobotNumEntry.Text);
+				data.AllianceColor = (string)AllianceColorPicker.SelectedItem;
+				data.StartPosition = int.Parse(StartPositionEntry.Text);
+				data.PreloadedItem = PreloadedItemPicker.SelectedIndex;
+				data.CrossHabLine = CrossHabLineSwitch.IsToggled ? 1 : 0;
+				data.HabLevelAchieved = HabLevelAttemptedPicker.SelectedIndex;
+				data.HadAssistance = EndHelped.IsToggled ? 1 : 0;
+				data.AssistedOthers = EndAssist.IsToggled ? 1 : 0;
+				data.HabLevelAttempted = HabLevelAttemptedPicker.SelectedIndex;
+				data.HabLevelAchieved = HabLevelAchievedPicker.SelectedIndex;
+				data.DefenseAmount = DefenseAmountPicker.SelectedIndex;
+				data.DefenseSkill = DefenseSkillPicker.SelectedIndex;
+				data.DefendedAmount = DefendedAmountPicker.SelectedIndex;
+				data.DefendedSkill = DefendedSkillPicker.SelectedIndex;
+				data.Breakdown = BreakdownPicker.SelectedItem.ToString();
+				data.Comments = CommentsEntry.Text;
+				data.BuildString("\t");
+				data.BuildQuery();
+				try {
+					data.WriteToTextFile(NewFilePicker.SelectedIndex == 0);
+					data.WriteToDatabase();
+					await DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
+					ResetAll();
+					CurrentPage = new MainPage();
+				} catch (UnauthorizedAccessException) {
+					if (await DisplayAlert("Error", "App does not have permission to access device storage. To fix this, go to \"Settings > Apps > ScoutingApp2019.Android > Permissions\" and turn on the switch for \"Storage\".", "Settings", "Cancel"))
+						Android.App.Application.Context.StartActivity(new Intent(Android.Provider.Settings.ActionApplicationDetailsSettings, Android.Net.Uri.Parse("package:" + Android.App.Application.Context.PackageName)));
+				}
+			}
+		}
+		#endregion
 	}
 }

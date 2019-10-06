@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Mono.Data.Sqlite;
+using System.IO;
 
 namespace ScoutingApp2019 {
 	public class DataHandler {
@@ -46,18 +47,32 @@ namespace ScoutingApp2019 {
 		public int DefendedSkill { get; set; }
 		public string Breakdown { get; set; }
 		public string Comments { get; set; }
-		
+
 		private readonly string filePath;
 		private readonly string fullDataName;
 		private readonly string partialDataPrefix;
+		private readonly string dbName;
 
 		private int partialDataNum;
 		private string dataString;
+		private string query;
 
-		public DataHandler(string filePath, string fullDataName, string partialDataPrefix) {
+		public DataHandler(string filePath, string fullDataName, string partialDataPrefix, string dbName) {
 			this.filePath = filePath;
 			this.fullDataName = fullDataName;
 			this.partialDataPrefix = partialDataPrefix;
+			this.dbName = dbName;
+			if (!File.Exists(filePath + dbName + ".sqlite")) {
+				File.Create(filePath + dbName + ".sqlite");
+				SqliteConnection connection = new SqliteConnection("Data Source = " + filePath + dbName + ".sqlite");
+				connection.Open();
+				StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("CreateStatement.txt"));
+				string createStatement = streamReader.ReadToEnd();
+				SqliteCommand command = new SqliteCommand(createStatement, connection);
+				command.ExecuteNonQuery();
+				connection.Close();
+				connection.Dispose();
+			}
 		}
 
 		public void BuildString(string separator) {
@@ -121,6 +136,100 @@ namespace ScoutingApp2019 {
 			partialDataStreamWriter.Close();
 			fullDataStreamWriter.Dispose();
 			partialDataStreamWriter.Dispose();
+		}
+
+		public void BuildQuery() {
+			query = "INSERT INTO RawData(" +
+				"ScoutName, " +
+				"MatchNumber," +
+				"ReplayMatch, " +
+				"TeamNumber, " +
+				"AllianceColor, " +
+				"StartPosition, " +
+				"PreloadedItem, " +
+				"CrossHabLine, " +
+				"SandCargoShip, " +
+				"SandCargoRocket1, " +
+				"SandCargoRocket2, " +
+				"SandCargoRocket3, " +
+				"SandCargoDrop, " +
+				"SandPanelShip, " +
+				"SandPanelRocket1, " +
+				"SandPanelRocket2, " +
+				"SandPanelRocket3, " +
+				"SandPanelDrop, " +
+				"TeleCargoShip, " +
+				"TeleCargoRocket1, " +
+				"TeleCargoRocket2, " +
+				"TeleCargoRocket3, " +
+				"TeleCargoDrop, " +
+				"TelePanelShip, " +
+				"TelePanelRocket1, " +
+				"TelePanelRocket2, " +
+				"TelePanelRocket3, " +
+				"TelePanelDrop, " +
+				"HabLevelAchieved, " +
+				"HabLevelAttempted, " +
+				"HadAssistance, " +
+				"AssistedOthers, " +
+				"DefenseAmount, " +
+				"DefenseSkill, " +
+				"DefendedAmount, " +
+				"DefendedSkill, " +
+				"Fouls, " +
+				"Breakdown, " +
+				"Comments" +
+			") " +
+			"VALUES (" +
+				"'" + ScoutName + "', " +
+				MatchNumber + ", " +
+				ReplayMatch + ", " +
+				TeamNumber + ", " +
+				"'" + AllianceColor + "', " +
+				StartPosition + ", " +
+				PreloadedItem + ", " +
+				CrossHabLine + ", " +
+				SandCargoShip + ", " +
+				SandCargoRocket1 + ", " +
+				SandCargoRocket2 + ", " +
+				SandCargoRocket3 + ", " +
+				SandCargoDrop + ", " +
+				SandPanelShip + ", " +
+				SandPanelRocket1 + ", " +
+				SandPanelRocket2 + ", " +
+				SandPanelRocket3 + ", " +
+				SandPanelDrop + ", " +
+				TeleCargoShip + ", " +
+				TeleCargoRocket1 + ", " +
+				TeleCargoRocket2 + ", " +
+				TeleCargoRocket3 + ", " +
+				TeleCargoDrop + ", " +
+				TelePanelShip + ", " +
+				TelePanelRocket1 + ", " +
+				TelePanelRocket2 + ", " +
+				TelePanelRocket3 + ", " +
+				TelePanelDrop + ", " +
+				HabLevelAchieved + ", " +
+				HabLevelAttempted + ", " +
+				HadAssistance + ", " +
+				AssistedOthers + ", " +
+				DefenseAmount + ", " +
+				DefenseSkill + ", " +
+				DefendedAmount + ", " +
+				DefendedSkill + ", " +
+				Fouls + ", " +
+				"'" + Breakdown + "', " +
+				"'" + Comments + "'" +
+			");";
+		}
+
+		public void WriteToDatabase() {
+			SqliteConnection connection = new SqliteConnection("Data Source = " + filePath + dbName + ".sqlite");
+			connection.Open();
+			SqliteCommand command = new SqliteCommand(query, connection);
+			command.ExecuteNonQuery();
+			connection.Close();
+			connection.Dispose();
 		}
 	}
 }
