@@ -68,7 +68,7 @@
 
 	</ContentPage>
 
-	<!-- P A G E 2 SANDSTORM -->
+	<!-- PAGE 2 SANDSTORM -->
 	<ContentPage Title="Sandstorm" Padding="10" TabIndex="1">
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Vertical">
@@ -178,7 +178,7 @@
 		</ScrollView>
 	</ContentPage>
 
-	<!--P A G E 3 TELEOP-->
+	<!--PAGE 3 TELEOP-->
 	<ContentPage Title="Teleop" Padding="10" TabIndex="2">
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Vertical">
@@ -285,7 +285,7 @@
 		</ScrollView>
 	</ContentPage>
 
-	<!--PAGE 4 - ENDGAME & SUBMIT-->
+	<!--PAGE 4 ENDGAME & SUBMIT-->
 	<ContentPage Title="End Game" Padding="10" TabIndex="3">
 		<ScrollView VerticalScrollBarVisibility="Never">
 			<StackLayout Orientation="Horizontal" Spacing="50">

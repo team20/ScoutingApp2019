@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,19 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SQLite" Version="1.0.110" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="Mono.Data.Sqlite.Portable" Version="1.0.3.5" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Mono.Android">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Mono.Android">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v4.4.87\Mono.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
 
