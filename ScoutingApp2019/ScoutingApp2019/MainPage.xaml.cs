@@ -13,8 +13,6 @@ namespace ScoutingApp2019 {
 		public MainPage() {
 			InitializeComponent();
 
-			if (!Directory.Exists("/storage/emulated/0/Download/ScoutingData"))
-				Directory.CreateDirectory("/storage/emulated/0/Download/ScoutingData");
 			data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2019_test", "2019_test_", "2019_test");
 			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_detroit_curie_teams.txt"));
 			teams = streamReader.ReadLine().Split(',');
@@ -543,9 +541,9 @@ namespace ScoutingApp2019 {
 				try {
 					data.WriteToTextFile(NewFilePicker.SelectedIndex == 0);
 					data.WriteToDatabase();
-					await DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
 					ResetAll();
 					CurrentPage = new MainPage();
+					await DisplayAlert("Saved", "The data you entered has been saved to a file", "OK");
 				} catch (UnauthorizedAccessException) {
 					if (await DisplayAlert("Error", "App does not have permission to access device storage. To fix this, go to \"Settings > Apps > ScoutingApp2019.Android > Permissions\" and turn on the switch for \"Storage\".", "Settings", "Cancel"))
 						Android.App.Application.Context.StartActivity(new Intent(Android.Provider.Settings.ActionApplicationDetailsSettings, Android.Net.Uri.Parse("package:" + Android.App.Application.Context.PackageName)));
