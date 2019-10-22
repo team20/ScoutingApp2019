@@ -57,24 +57,40 @@ namespace ScoutingApp2019 {
 		private string dataString;
 		private string query;
 
+		/// <summary>
+		/// Initializes a new instance of the DataHandler class.
+		/// </summary>
+		/// <param name="filePath">Folder to store files in.</param>
+		/// <param name="fullDataName">Name of Full Data text file.</param>
+		/// <param name="partialDataPrefix">Name of Partial Data text files.</param>
+		/// <param name="dbName">Name of SQLite file.</param>
 		public DataHandler(string filePath, string fullDataName, string partialDataPrefix, string dbName) {
 			this.filePath = filePath;
 			this.fullDataName = fullDataName;
 			this.partialDataPrefix = partialDataPrefix;
 			this.dbName = dbName;
+			if (!Directory.Exists("/storage/emulated/0/Download/ScoutingData"))
+				Directory.CreateDirectory("/storage/emulated/0/Download/ScoutingData");
 			if (!File.Exists(filePath + dbName + ".sqlite")) {
 				File.Create(filePath + dbName + ".sqlite");
 				SqliteConnection connection = new SqliteConnection("Data Source = " + filePath + dbName + ".sqlite");
 				connection.Open();
 				StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("CreateStatement.txt"));
 				string createStatement = streamReader.ReadToEnd();
+				streamReader.Close();
+				streamReader.Dispose();
 				SqliteCommand command = new SqliteCommand(createStatement, connection);
 				command.ExecuteNonQuery();
+				command.Dispose();
 				connection.Close();
 				connection.Dispose();
 			}
 		}
 
+		/// <summary>
+		/// Builds string to be apended to text file.
+		/// </summary>
+		/// <param name="separator">String to separate fields with (comma, tab, space, etc.).</param>
 		public void BuildString(string separator) {
 			dataString =
 				ScoutName + separator +
@@ -118,6 +134,10 @@ namespace ScoutingApp2019 {
 				Comments;
 		}
 
+		/// <summary>
+		/// Writes data to a text file.
+		/// </summary>
+		/// <param name="newFile">True if a new Partial Data file should be created.</param>
 		public void WriteToTextFile(bool newFile) {
 			bool hasNumber = false;
 			for (int i = 0; !hasNumber; i++)
@@ -138,6 +158,9 @@ namespace ScoutingApp2019 {
 			partialDataStreamWriter.Dispose();
 		}
 
+		/// <summary>
+		/// Builds query for inserting data into SQLite database.
+		/// </summary>
 		public void BuildQuery() {
 			query = "INSERT INTO RawData(" +
 				"ScoutName, " +
@@ -223,6 +246,9 @@ namespace ScoutingApp2019 {
 			");";
 		}
 
+		/// <summary>
+		/// Inserts data into SQLite database.
+		/// </summary>
 		public void WriteToDatabase() {
 			SqliteConnection connection = new SqliteConnection("Data Source = " + filePath + dbName + ".sqlite");
 			connection.Open();
