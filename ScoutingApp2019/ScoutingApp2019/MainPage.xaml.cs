@@ -13,8 +13,8 @@ namespace ScoutingApp2019 {
 		public MainPage() {
 			InitializeComponent();
 
-			data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2019_test", "2019_test_", "2019_test");
-			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_detroit_curie_teams.txt"));
+			data = new DataHandler("/storage/emulated/0/Download/ScoutingData/", "2019_rumble", "2019_rumble_", "2019_rumble");
+			StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("2019_rumble_teams.txt"));
 			teams = streamReader.ReadLine().Split(',');
 			streamReader.Close();
 			streamReader.Dispose();
