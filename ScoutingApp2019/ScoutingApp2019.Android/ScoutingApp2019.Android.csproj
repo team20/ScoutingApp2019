@@ -127,5 +127,8 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\CreateStatement.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\2019_rumble_teams.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
