@@ -1,4 +1,5 @@
-﻿using Mono.Data.Sqlite;
+﻿using Android.Bluetooth;
+using Mono.Data.Sqlite;
 using System.IO;
 
 namespace ScoutingApp2019 {
@@ -48,14 +49,12 @@ namespace ScoutingApp2019 {
 		public string Breakdown { get; set; }
 		public string Comments { get; set; }
 
-		private readonly string filePath;
-		private readonly string fullDataName;
-		private readonly string partialDataPrefix;
-		private readonly string dbName;
+		private readonly string _filePath;
+		private readonly string _fileName;
 
-		private int partialDataNum;
-		private string dataString;
-		private string query;
+		private int _partialDataNum;
+		private string _dataString;
+		private string _query;
 
 		/// <summary>
 		/// Initializes a new instance of the DataHandler class.
@@ -64,16 +63,14 @@ namespace ScoutingApp2019 {
 		/// <param name="fullDataName">Name of Full Data text file.</param>
 		/// <param name="partialDataPrefix">Name of Partial Data text files.</param>
 		/// <param name="dbName">Name of SQLite file.</param>
-		public DataHandler(string filePath, string fullDataName, string partialDataPrefix, string dbName) {
-			this.filePath = filePath;
-			this.fullDataName = fullDataName;
-			this.partialDataPrefix = partialDataPrefix;
-			this.dbName = dbName;
+		public DataHandler(string filePath, string fileName) {
+			_filePath = filePath;
+			_fileName = BluetoothAdapter.DefaultAdapter.Name + " " + fileName;
 			if (!Directory.Exists("/storage/emulated/0/Download/ScoutingData"))
 				Directory.CreateDirectory("/storage/emulated/0/Download/ScoutingData");
-			if (!File.Exists(filePath + dbName + ".sqlite")) {
-				File.Create(filePath + dbName + ".sqlite");
-				SqliteConnection connection = new SqliteConnection("Data Source = " + filePath + dbName + ".sqlite");
+			if (!File.Exists(_filePath + _fileName + ".sqlite")) {
+				File.Create(_filePath + _fileName + ".sqlite");
+				SqliteConnection connection = new SqliteConnection("Data Source = " + _filePath + _fileName + ".sqlite");
 				connection.Open();
 				StreamReader streamReader = new StreamReader(Android.App.Application.Context.Assets.Open("CreateStatement.txt"));
 				string createStatement = streamReader.ReadToEnd();
@@ -92,7 +89,7 @@ namespace ScoutingApp2019 {
 		/// </summary>
 		/// <param name="separator">String to separate fields with (comma, tab, space, etc.).</param>
 		public void BuildString(string separator) {
-			dataString =
+			_dataString =
 				ScoutName + separator +
 				MatchNumber + separator +
 				ReplayMatch + separator +
@@ -141,17 +138,17 @@ namespace ScoutingApp2019 {
 		public void WriteToTextFile(bool newFile) {
 			bool hasNumber = false;
 			for (int i = 0; !hasNumber; i++)
-				if (!File.Exists(filePath + partialDataPrefix + i + ".txt")) {
+				if (!File.Exists(_filePath + _fileName + "_" + i + ".txt")) {
 					if (newFile || (!newFile && i == 0))
-						partialDataNum = i;
+						_partialDataNum = i;
 					else
-						partialDataNum = i - 1;
+						_partialDataNum = i - 1;
 					hasNumber = true;
 				}
-			StreamWriter fullDataStreamWriter = new StreamWriter(filePath + fullDataName + ".txt", true);
-			StreamWriter partialDataStreamWriter = new StreamWriter(filePath + partialDataPrefix + partialDataNum + ".txt", true);
-			fullDataStreamWriter.WriteLineAsync(dataString);
-			partialDataStreamWriter.WriteLineAsync(dataString);
+			StreamWriter fullDataStreamWriter = new StreamWriter(_filePath + _fileName + ".txt", true);
+			StreamWriter partialDataStreamWriter = new StreamWriter(_filePath + _fileName + "_" + _partialDataNum + ".txt", true);
+			fullDataStreamWriter.WriteLineAsync(_dataString);
+			partialDataStreamWriter.WriteLineAsync(_dataString);
 			fullDataStreamWriter.Close();
 			partialDataStreamWriter.Close();
 			fullDataStreamWriter.Dispose();
@@ -162,7 +159,7 @@ namespace ScoutingApp2019 {
 		/// Builds query for inserting data into SQLite database.
 		/// </summary>
 		public void BuildQuery() {
-			query = "INSERT INTO RawData(" +
+			_query = "INSERT INTO RawData(" +
 				"ScoutName, " +
 				"MatchNumber," +
 				"ReplayMatch, " +
@@ -250,9 +247,9 @@ namespace ScoutingApp2019 {
 		/// Inserts data into SQLite database.
 		/// </summary>
 		public void WriteToDatabase() {
-			SqliteConnection connection = new SqliteConnection("Data Source = " + filePath + dbName + ".sqlite");
+			SqliteConnection connection = new SqliteConnection("Data Source = " + _filePath + _fileName + ".sqlite");
 			connection.Open();
-			SqliteCommand command = new SqliteCommand(query, connection);
+			SqliteCommand command = new SqliteCommand(_query, connection);
 			command.ExecuteNonQuery();
 			connection.Close();
 			connection.Dispose();
